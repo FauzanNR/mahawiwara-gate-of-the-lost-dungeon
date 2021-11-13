@@ -19,6 +19,9 @@ TagManager:
   - Tombak
   - Door
   - GameManager
+  - Key
+  - DoorBoss
+  - LeftHand
   layers:
   - Default
   - TransparentFX
