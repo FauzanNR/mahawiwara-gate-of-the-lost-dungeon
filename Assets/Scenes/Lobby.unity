@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 1520699}
   - component: {fileID: 1520698}
   m_Layer: 0
-  m_Name: GameManager
-  m_TagString: GameManager
+  m_Name: PlayerManager
+  m_TagString: PlayerManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,6 +153,8 @@ MonoBehaviour:
   deckWeapon: {fileID: 609571842}
   pedang: {fileID: 772957224}
   tombak: {fileID: 1021259362}
+  player: {fileID: 0}
+  playerMovement: {fileID: 0}
   weaponPedang: 0
   weaponTombak: 0
 --- !u!4 &1520699
@@ -793,6 +795,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604114715043778388, guid: 5da98d4fa0857184fa632eeb3acb1cf1,
+        type: 3}
+      propertyPath: speed
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da98d4fa0857184fa632eeb3acb1cf1, type: 3}

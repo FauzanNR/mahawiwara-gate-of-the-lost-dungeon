@@ -22,6 +22,9 @@ TagManager:
   - Key
   - DoorBoss
   - LeftHand
+  - PlayerManager
+  - Portal
+  - Level
   layers:
   - Default
   - TransparentFX

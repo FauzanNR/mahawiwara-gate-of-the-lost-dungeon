@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,23 +5,33 @@ public class PlayerMove : MonoBehaviour
 {
     //Variable
     public GameObject pedang, tombak;
-    private float speed=100;
+    private float speed=500;
     private float horizontal;
     private float vertical;
     private Vector3 move;
-    private GameObject theDeckWeapon;
+    private GameObject theDeckWeapon, manager;
+    private int level;
 
     //Reference
     private Rigidbody rb;
     private Animator anim;
+    private PlayerManager playerManager;
     private GameManager gameManager;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        theDeckWeapon = GameObject.Find("GameManager");
-        gameManager = theDeckWeapon.GetComponent<GameManager>();
+
+        theDeckWeapon = GameObject.Find("PlayerManager");
+        playerManager = theDeckWeapon.GetComponent<PlayerManager>();
+
+        if(SceneManager.GetActiveScene().name == "Game")
+        {
+            manager = GameObject.FindGameObjectWithTag("GameManager");
+            gameManager = manager.GetComponent<GameManager>();
+        }
+        
     }
 
     private void Update()
@@ -36,20 +44,24 @@ public class PlayerMove : MonoBehaviour
         //Set Value
         anim.SetFloat("VelocityX", horizontal);
         anim.SetFloat("VelocityZ", vertical);
-        move=transform.right*horizontal+transform.forward*vertical;
+        /*move=transform.right*horizontal+transform.forward*vertical;*/
+
+        Vector3 movement = new Vector3(horizontal, -1.0f, vertical);
+        movement = transform.TransformDirection(movement);
+        rb.velocity = movement * speed * Time.deltaTime;
 
 
-        if(Input.GetKey(KeyCode.LeftShift)&&vertical>0.9){
+        if (Input.GetKey(KeyCode.LeftShift)&&vertical>0.9){
             anim.SetBool("Dash",true);
-            speed=150;
+            speed=700;
         }
         else
         {
             anim.SetBool("Dash",false);
-            speed=100;
+            speed=500;
         }
 
-        if (gameManager.weaponPedang == true)
+        if (playerManager.weaponPedang == true)
         {
             tombak.SetActive(false);
             pedang.SetActive(true);
@@ -59,7 +71,7 @@ public class PlayerMove : MonoBehaviour
             pedang.SetActive(false);
         }
 
-        if (gameManager.weaponTombak == true)
+        if (playerManager.weaponTombak == true)
         {
             pedang.SetActive(false);
             tombak.SetActive(true);
@@ -68,30 +80,37 @@ public class PlayerMove : MonoBehaviour
         {
             tombak.SetActive(false);
         }
+
+        gameManager.levelAmount = level;
     }
 
-    void FixedUpdate()
+ /*   void FixedUpdate()
     {
         rb.velocity=move*speed*Time.fixedDeltaTime;
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
         switch (collision.gameObject.tag)
         {
             case "Pedang":
-                gameManager.deckWeapon.SetActive(true);
-                gameManager.tombak.SetActive(false);
-                gameManager.pedang.SetActive(true);
+                playerManager.deckWeapon.SetActive(true);
+                playerManager.tombak.SetActive(false);
+                playerManager.pedang.SetActive(true);
                 break;
             case "Tombak":
-                gameManager.deckWeapon.SetActive(true);
-                gameManager.pedang.SetActive(false);
-                gameManager.tombak.SetActive(true);
+                playerManager.deckWeapon.SetActive(true);
+                playerManager.pedang.SetActive(false);
+                playerManager.tombak.SetActive(true);
                 break;
             case "Door":
                 SceneManager.LoadScene("Game");
-                /*      Destroy(this.gameObject);*/
+                Destroy(this.gameObject);
+                break;
+            case "Portal":
+                level += 1;
+                SceneManager.LoadScene("Game");
+       /*         Destroy(this.gameObject);*/
                 break;
         }
     }
@@ -101,10 +120,10 @@ public class PlayerMove : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Pedang":
-                gameManager.deckWeapon.SetActive(false);
+                playerManager.deckWeapon.SetActive(false);
                 break;
             case "Tombak":
-                gameManager.deckWeapon.SetActive(false);
+                playerManager.deckWeapon.SetActive(false);
                 break;
         }
     }
