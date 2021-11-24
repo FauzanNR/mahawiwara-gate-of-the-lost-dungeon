@@ -7,7 +7,9 @@ public class LevelBuilder: MonoBehaviour {
 	public Room startRoomPrefab, endRoomPrefab;
 	public List<Room> roomPrefabs = new List<Room>();
 	public Vector2 iterationRange = new Vector2( 3, 10 );
-	public GameObject player;
+	public NavMeshSurface navMeshSurface;
+	/*public GameObject enemyPrefab;*/
+/*	public GameObject player;*/
 
 	List<Doorway> availableDoorways = new List<Doorway>();
 
@@ -20,11 +22,11 @@ public class LevelBuilder: MonoBehaviour {
 	void Start() {
 		roomLayerMask = LayerMask.GetMask( "Room" );
 		StartCoroutine( "GenerateLevel" );
-
+		
 	}
 
 	private void Update() {
-
+		
 		if(Input.GetKey( KeyCode.R )) {
 			ResetLevelGenerator();
 		}
@@ -56,13 +58,15 @@ public class LevelBuilder: MonoBehaviour {
 		// Level generation finished
 		Debug.Log( "Level generation finished" );
 
-		player.SetActive( true );
-		player.transform.position = startRoom.playerStart.position;
-		player.transform.rotation = startRoom.playerStart.rotation;
+        navMeshSurface.BuildNavMesh();
 
-		//yield return new WaitForSeconds (3);
-		//ResetLevelGenerator ();
-	}
+        /*player.SetActive( true );
+		player.transform.position = startRoom.playerStart.position;
+		player.transform.rotation = startRoom.playerStart.rotation;*/
+
+        //yield return new WaitForSeconds (3);
+        //ResetLevelGenerator ();
+    }
 
 	void PlaceStartRoom() {
 		// Instantiate room
@@ -89,6 +93,19 @@ public class LevelBuilder: MonoBehaviour {
 		// Instantiate room
 		Room currentRoom = Instantiate( roomPrefabs[Random.Range( 0, roomPrefabs.Count )] ) as Room;
 		currentRoom.transform.parent = this.transform;
+
+		/*int cekInstantiate = Random.Range(0, 2);
+		if (cekInstantiate == 1)
+		{
+			for(int i = 0; i < 5; i++)
+            {
+				GameObject enemy = Instantiate(enemyPrefab) as GameObject;
+				enemy.transform.parent = currentRoom.transform;
+				Vector3 position = new Vector3(Random.Range(currentRoom.minX, currentRoom.maxX), 0, Random.Range(currentRoom.minZ, currentRoom.maxZ));
+				enemy.transform.position = position;
+			}
+		}*/
+
 
 		// Create doorway lists to loop over
 		List<Doorway> allAvailableDoorways = new List<Doorway>( availableDoorways );
@@ -160,7 +177,7 @@ public class LevelBuilder: MonoBehaviour {
 
 	bool CheckRoomOverlap(Room room) {
 		Bounds bounds = room.RoomBounds;
-		bounds.Expand( -0.1f );
+		bounds.Expand( -1f );
 
 		Collider[] colliders = Physics.OverlapBox( bounds.center, bounds.size / 2, room.transform.rotation, roomLayerMask );
 		if(colliders.Length > 0) {

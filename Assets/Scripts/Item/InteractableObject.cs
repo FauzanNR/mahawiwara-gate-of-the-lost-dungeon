@@ -5,14 +5,13 @@ public abstract class InteractableObject: MonoBehaviour {
 
 	public bool isInteracted = false;
 
-
 	void Update() {
 		onIneteractedByPlayer();
 	}
 
-	public abstract string GetInformation();
+    public abstract GameObject GetInformation();
 
-	public virtual bool onIneteractedByPlayer() {
+    public virtual bool onIneteractedByPlayer() {
 		return isInteracted;
 	}
 

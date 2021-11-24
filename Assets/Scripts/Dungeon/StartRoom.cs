@@ -2,5 +2,5 @@
 
 public class StartRoom : Room
 {
-    public Transform playerStart;
+   /* public Transform playerStart;*/
 }

@@ -1,50 +1,100 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerMove: MonoBehaviour {
-	//Variable
-	private float moveSpeed;
-	private float transformX;
-	private float transformZ;
-	private Vector3 move;
+public class PlayerMove : MonoBehaviour
+{
+    [Header("Variable")]
+    private float moveSpeed = 3;
+    private float transformX;
+    private float transformZ;
+    private float jumpForce = 3f;
+    private float gravity = -20f;
 
-	//Reference
-	private Rigidbody rb;
-	private Animator anim;
+    //Ground Check
+    public Transform groundCheck;
+    private float groundDistance = 0.4f;
+    public LayerMask groundMask;
+    bool isGrounded;
 
-	void Start() {
+    private Vector3 move;
+    Vector3 velocity;
 
-		anim = GetComponent<Animator>();
-		rb = GetComponent<Rigidbody>();
-	}
-	private void Update() {
-		//Input
-		transformX = Input.GetAxis( "Horizontal" );
-		transformZ = Input.GetAxis( "Vertical" );
+    [Header("Reference")]
+    private Animator anim;
+    private CharacterController controller;
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+        controller = GetComponent<CharacterController>();
+    }
+    private void Update()
+    {
+        Movement();
+        //ground check
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
 
-		//Set Value
-		anim.SetFloat( "VelocityX", transformX );
-		anim.SetFloat( "VelocityZ", transformZ );
+        //Gravity setting
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
 
-		move = transform.right * transformX + transform.forward * transformZ; //movement
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Dash();
+        }
+        else
+        {
+            Walk();
+        }
+        //Input
+        transformX = Input.GetAxis("Horizontal");
+        transformZ = Input.GetAxis("Vertical");
 
-		if(Input.GetKey( KeyCode.LeftShift )) {
-			anim.SetBool( "Dash", true );
-			moveSpeed = 5;
-		} else if(Input.GetButtonDown( "Jump" )) {
-			rb.AddForce( Vector3.up * 200 );
-		} else {
-			anim.SetBool( "Dash", false );
-			moveSpeed = 3;
-		}
-	}
+        //Set Value animasi
+        anim.SetFloat("VelocityX", transformX);
+        anim.SetFloat("VelocityZ", transformZ);
+    }
+    private void FixedUpdate()
+    {
+        if (Input.GetButton("Jump") && isGrounded)
+        {
+            Jump();
+        }
+    }
 
-	void FixedUpdate() {
-		transform.Translate( move * moveSpeed * Time.deltaTime, Space.World ); //playermovement
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "StartGame")
+        {
+            SceneManager.LoadScene("Lobby");
+        }
+    }
 
-		if(Input.GetButtonDown( "Jump" )) {
-			rb.AddForce( Vector3.up * 200 );
-		}
-	}
+    public void Movement()
+    {
+        move = transform.right * transformX + transform.forward * transformZ;
+        controller.Move(move * moveSpeed * Time.deltaTime);
+    }
+
+    public void Dash()
+    {
+        anim.SetBool("Dash", true);
+        moveSpeed = 5;
+    }
+
+    public void Walk()
+    {
+        anim.SetBool("Dash", false);
+        moveSpeed = 3;
+    }
+
+    public void Jump()
+    {
+        velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+    }
 }
