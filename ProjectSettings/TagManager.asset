@@ -19,6 +19,10 @@ TagManager:
   - Tombak
   - Door
   - GameManager
+  - Peti
+  - Chest
+  - WeaponPlayer
+  - PanelWeapon
   layers:
   - Default
   - TransparentFX
@@ -29,8 +33,8 @@ TagManager:
   - 
   - 
   - Room
-  - 
-  - 
+  - Character
+  - Obstacle
   - 
   - 
   - 
