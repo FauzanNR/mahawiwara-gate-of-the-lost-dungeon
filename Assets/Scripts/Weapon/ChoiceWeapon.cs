@@ -28,28 +28,6 @@ public class ChoiceWeapon: InteractableObject
                 panelActive = false;
                 Time.timeScale = 1;
             }
-            /* 
-             Debug.Log("AAAAAA" + panelActive);
-             if (Input.GetKey(KeyCode.F))
-             {
-                 Debug.Log("PANEL");
-                 *//*panel.SetActive(base.isInteracted);*//*
-                 panelActive = true;
-                 *//* Time.timeScale = 0;*//*
-
-
-             }
-             if (Input.GetKey(KeyCode.F) && (panelActive == true))
-             {
-                 Debug.Log("EQUIP");
-                 *//*base.isEquip = true;*//*
-             }
-             else if (Input.GetKey(KeyCode.Escape))
-             {
-                 panel.SetActive(false);
-                 panelActive = false;
-                 *//*Time.timeScale = 1;*//*
-             }*/
         }
         else
         {
