@@ -51,6 +51,10 @@ public class ChoiceWeapon: InteractableObject
                  *//*Time.timeScale = 1;*//*
              }*/
         }
+        else
+        {
+            panelText.SetActive(base.isInteracted);
+        }
         return base.isInteracted;
     }
 }
