@@ -26,13 +26,6 @@ public class LevelBuilder: MonoBehaviour {
 		StartCoroutine( "GenerateLevel" );
 	}
 
-	private void Update() 
-	{	
-		if(Input.GetKey( KeyCode.R )) {
-			ResetLevelGenerator();
-		}
-    }
-
 	public IEnumerator GenerateLevel() {
 		WaitForSeconds startup = new WaitForSeconds( 1 );
 		WaitForFixedUpdate interval = new WaitForFixedUpdate();

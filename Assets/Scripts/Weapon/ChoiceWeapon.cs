@@ -20,6 +20,8 @@ public class ChoiceWeapon: InteractableObject
             }
             else if (Input.GetKeyDown(KeyCode.F) && (panelActive == true))
             {
+                Time.timeScale = 1;
+                panel.SetActive(false);
                 TakeWeapon();
             }
             else if (Input.GetKeyDown(KeyCode.Escape) && (panelActive == true))

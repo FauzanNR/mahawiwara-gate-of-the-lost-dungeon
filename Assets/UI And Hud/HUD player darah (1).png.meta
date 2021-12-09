@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: d248d33abc00df746a3de0cc32160fb3
+guid: bbb8fa18b6a545f4abfbaa422cf3d2db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3879310799412111590
-    second: HUD_player_health_border-removebg-preview_0
-  - first:
-      213: 6714827847759668935
-    second: HUD_player_health_border-removebg-preview_1
-  - first:
-      213: -7995771944649996748
-    second: HUD_player_health_border-removebg-preview_2
+      213: -3258708581513899500
+    second: HUD player darah (1)_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 75, y: 69, z: 55, w: 109}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -82,14 +76,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -108,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HUD_player_health_border-removebg-preview_0
+      name: HUD player darah (1)_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 177
-        width: 353
-        height: 6
+        x: 592
+        y: 1402
+        width: 4655
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,50 +116,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1754b3a16be92ac0800000000000000
-      internalID: -3879310799412111590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HUD_player_health_border-removebg-preview_1
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 70
-        width: 538
-        height: 198
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c6ad91d95cdf2d50800000000000000
-      internalID: 6714827847759668935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HUD_player_health_border-removebg-preview_2
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 135
-        width: 340
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4364a1e97cf490190800000000000000
-      internalID: -7995771944649996748
+      spriteID: 412d85c7fcdb6c2d0800000000000000
+      internalID: -3258708581513899500
       vertices: []
       indices: 
       edges: []
@@ -173,7 +125,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 5a5a263eee4d7f74386cb5d989019e63
     internalID: 0
     vertices: []
     indices: 
