@@ -7,10 +7,26 @@ public class CombatCondition : MonoBehaviour
     [Header("Variable")]
     private int comboStep;
     private bool comboPossible;
-    private bool isAttack;
+    private bool isAttacking;
+    private bool isSkilling;
+    private PLAYER_STATE State;
+
     [Header("Reference")]
     private PlayerMove playermove;
     private Animator animator;
+
+    public PLAYER_STATE playerState
+    {
+        get
+        {
+            return State;
+        }
+        set
+        {
+            State = value;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,24 +37,39 @@ public class CombatCondition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isAttack = animator.GetCurrentAnimatorStateInfo(1).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack3") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2");
-        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O))
+        isAttacking = animator.GetCurrentAnimatorStateInfo(1).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack3") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2");
+        isSkilling = animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill3");
+        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.C))
         {
             animator.SetLayerWeight(1, 1);
-            if (Input.GetButtonDown("Fire1"))
+            CancelInvoke("BackToIdle");
+            if (Input.GetButtonDown("Fire1") && !isSkilling)
             {
+                playerState = PLAYER_STATE.att1;
                 MeleAttack();
             }
-            else if (Input.GetKeyDown(KeyCode.P) && !isAttack)
+            else if (Input.GetKeyDown(KeyCode.Q) && !isAttacking)
             {
+                playerState = PLAYER_STATE.att2;
                 animator.Play("Skill1", 1);
                 ComboReset();
             }
-            else if (Input.GetKeyDown(KeyCode.O) && !isAttack)
+            else if (Input.GetKeyDown(KeyCode.R) && !isAttacking)
             {
+                playerState = PLAYER_STATE.att3;
                 animator.Play("Skill2", 1);
                 ComboReset();
             }
+            else if (Input.GetKeyDown(KeyCode.C) && !isAttacking)
+            {
+                playerState = PLAYER_STATE.att4;
+                animator.Play("Skill3", 1);
+                ComboReset();
+            }
+        }
+        else
+        {
+            Invoke("BackToIdle", 5);
         }
     }
 

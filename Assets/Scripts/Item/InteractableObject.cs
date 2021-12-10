@@ -4,10 +4,12 @@
 public abstract class InteractableObject: MonoBehaviour {
 
 	public bool isInteracted = false;
+	protected bool isEquip = false;
 
 	void Update() {
 		onIneteractedByPlayer();
-	}
+        EquipWeapon();
+    }
 
 	public virtual bool onIneteractedByPlayer() {
 		return isInteracted;
@@ -20,4 +22,19 @@ public abstract class InteractableObject: MonoBehaviour {
 	public void DeSelected() {
 		isInteracted = false;
 	}
+
+    public bool EquipWeapon()
+    {
+        return isEquip;
+    }
+
+    public void TakeWeapon()
+    {
+        isEquip = true;
+    }
+
+    public void DropWeapon()
+    {
+        isEquip = false;
+    }
 }

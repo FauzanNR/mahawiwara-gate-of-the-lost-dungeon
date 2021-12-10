@@ -15,6 +15,7 @@ public class DoorStart : InteractableObject
 
             if (Input.GetKey(KeyCode.F))
             {
+                Debug.Log("DOOR");
                 SceneManager.LoadScene("Game");
             }
         }
@@ -22,6 +23,6 @@ public class DoorStart : InteractableObject
         {
             panelKey.SetActive(base.isInteracted);
         }
-        return false;
+        return base.isInteracted;
     }
 }
