@@ -19,6 +19,7 @@ TagManager:
   - Tombak
   - Door
   - GameManager
+  - Chest
   layers:
   - Default
   - TransparentFX
@@ -29,9 +30,9 @@ TagManager:
   - 
   - 
   - Room
-  - 
-  - 
-  - 
+  - Character
+  - Obstacle
+  - Obstacle1
   - 
   - 
   - 

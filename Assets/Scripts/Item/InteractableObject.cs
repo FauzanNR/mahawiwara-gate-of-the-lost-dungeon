@@ -9,9 +9,7 @@ public abstract class InteractableObject: MonoBehaviour {
 		onIneteractedByPlayer();
 	}
 
-    public abstract GameObject GetInformation();
-
-    public virtual bool onIneteractedByPlayer() {
+	public virtual bool onIneteractedByPlayer() {
 		return isInteracted;
 	}
 
@@ -21,6 +19,5 @@ public abstract class InteractableObject: MonoBehaviour {
 
 	public void DeSelected() {
 		isInteracted = false;
-		Debug.Log( isInteracted );
 	}
 }
