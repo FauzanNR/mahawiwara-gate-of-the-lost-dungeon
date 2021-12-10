@@ -1,62 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
-public class NpcHealth : MonoBehaviour
-{
-    public int startHealth = 100;
-    public int currHealth;
-    public int attack = 10;
+public class NpcHealth: MonoBehaviour {
+	public int startHealth = 100;
+	public int currHealth;
+	public int attack = 10;
 
-    /*public Slider healthSlider;*/
-    private GameObject weaponPlayer;
-    private GameObject player;
-    private CombatCondition condition;
+	/*public Slider healthSlider;*/
+	private GameObject weaponPlayer;
+	private GameObject player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        condition = player.GetComponent<CombatCondition>();
-        currHealth = startHealth;
-    }
+	void Start() {
 
-    // Update is called once per frame
-    void Update()
-    {
-        weaponPlayer = GameObject.FindGameObjectWithTag("WeaponPlayer");
-        if(currHealth <= 0)
-        {
-            Destroy(this.gameObject);
-        }
-    }
+		player = GameObject.FindGameObjectWithTag( "Player" );
+		Invoke( "getWeapon", 3 );
+		currHealth = startHealth;
+	}
 
-    public void TakeAttack(int amount)
-    {
-        currHealth -= amount;
-    }
+	void getWeapon() => weaponPlayer = GameObject.FindGameObjectWithTag( "WeaponPlayer" );
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject == weaponPlayer)
-        {
-            if (condition.playerState.ToString() == "att1")
-            {
-                TakeAttack(weaponPlayer.GetComponent<WeaponStats>().att1);
-            }
-            else if (condition.playerState.ToString() == "att2")
-            {
-                TakeAttack(weaponPlayer.GetComponent<WeaponStats>().att2);
-            }
-            else if (condition.playerState.ToString() == "att3")
-            {
-                TakeAttack(weaponPlayer.GetComponent<WeaponStats>().att3);
-            }
-            else if (condition.playerState.ToString() == "att4")
-            {
-                TakeAttack(weaponPlayer.GetComponent<WeaponStats>().att4);
-            }
-        }
-    }
+	void Update() {
+
+		if(currHealth <= 0) {
+			if(this.transform.parent != null) {
+				Destroy( this.transform.parent.gameObject );
+			}
+			Destroy( this.gameObject );
+		}
+	}
+
+	public void getDamage(int amount) {
+		currHealth -= amount;
+	}
+
+	void OnTriggerEnter(Collider other) {
+		var d = weaponPlayer.GetComponent<WeaponStats>().Damage();
+		print( "damage = " + d );
+		if(other.gameObject == weaponPlayer) {
+
+			getDamage( d );
+		}
+	}
 }

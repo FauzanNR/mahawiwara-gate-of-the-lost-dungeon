@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using System.Threading.Tasks;
 
 public class LevelBuilder: MonoBehaviour {
 	public Room startRoomPrefab, endRoomPrefab;
 	public List<Room> roomPrefabs = new List<Room>();
 	public Vector2 iterationRange = new Vector2( 3, 10 );
-	public NavMeshSurface navMeshSurface;
+	public GameObject navMeshSurface;
 
 	public GameObject key;
 	public GameObject playerPrefab;
@@ -30,11 +29,11 @@ public class LevelBuilder: MonoBehaviour {
 		StartCoroutine( GenerateLevel() );
 	}
 
-	private void Update() {
-		if(Input.GetKey( KeyCode.R )) {
-			ResetLevelGenerator();
-		}
-	}
+	//private void Update() {
+	//	if(Input.GetKey( KeyCode.R )) {
+	//		ResetLevelGenerator();
+	//	}
+	//}
 
 	public IEnumerator GenerateLevel() {
 		WaitForSeconds startup = new WaitForSeconds( 1 );
@@ -85,7 +84,10 @@ public class LevelBuilder: MonoBehaviour {
 			}
 		}
 		RoomIsDone = true;
-		navMeshSurface.BuildNavMesh();
+
+		var navNeshes = navMeshSurface.GetComponents<NavMeshSurface>();
+		navNeshes[0].BuildNavMesh();
+		navNeshes[1].BuildNavMesh();
 	}
 
 	void PlaceStartRoom() {

@@ -49,14 +49,10 @@ public class NPCController: MonoBehaviour {
 				enemyState = NPC_STATE.Idle;
 			} else if(movement > 2) {
 				enemyState = NPC_STATE.Jump;
-				Debug.Log( "is Jump" );
 			} else {
 				enemyState = NPC_STATE.Patrol;
 			}
 		}
-
-
-		Debug.Log( "state " + enemyState );
 	}
 
 	void enemyAttack() {

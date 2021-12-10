@@ -30,7 +30,6 @@ public class NPCMovement: MonoBehaviour {
 			controller.enemyState != NPC_STATE.Attack1 &&
 			controller.enemyState == NPC_STATE.Idle && seconds % IdleTime == 0) {
 			seconds = 0;
-			print( "start patrol" );
 			Move( randomPosition.generateRandomPosition( chaseArea, 1f, avoidanceLayer ) );
 		}
 	}

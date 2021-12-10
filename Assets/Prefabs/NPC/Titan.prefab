@@ -601,6 +601,8 @@ GameObject:
   - component: {fileID: 2489362559752735766}
   - component: {fileID: 3668424159487965611}
   - component: {fileID: 4808511611691118376}
+  - component: {fileID: 5847272016444371391}
+  - component: {fileID: 5744411853935834608}
   m_Layer: 9
   m_Name: Titan
   m_TagString: Untagged
@@ -751,6 +753,35 @@ MonoBehaviour:
   attacksPositionList:
   - {fileID: 2515485881180456069}
   - {fileID: 3021114416175231622}
+--- !u!114 &5847272016444371391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562675200895678374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d10f74520265f04ba5cd7d44aa8bb6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 100
+  currHealth: 0
+  attack: 10
+--- !u!136 &5744411853935834608
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562675200895678374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.74
+  m_Height: 2.87
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.24, z: 0}
 --- !u!1 &1562675200895678376
 GameObject:
   m_ObjectHideFlags: 0
