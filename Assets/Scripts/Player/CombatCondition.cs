@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CombatCondition: MonoBehaviour {
 	[Header( "Variable" )]
@@ -9,10 +10,13 @@ public class CombatCondition: MonoBehaviour {
 	private bool isAttacking;
 	private bool isSkilling;
 	private PLAYER_STATE State;
+	public Text text;
 
 	[Header( "Reference" )]
 	private PlayerMove playermove;
 	private Animator animator;
+	private WeaponStats weaponStats;
+	private GameObject stats;
 
 	public PLAYER_STATE playerState {
 		get {
@@ -31,6 +35,14 @@ public class CombatCondition: MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
+
+		stats = GameObject.FindGameObjectWithTag("Player");
+		weaponStats = stats.GetComponentInChildren<WeaponStats>();
+
+		weaponStats.colldownAtt2 -= Time.deltaTime;
+		int seconds = (int)(weaponStats.colldownAtt2 % 60);
+		text.text = seconds.ToString();
+
 		//isAttacking = animator.GetCurrentAnimatorStateInfo(1).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack3") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2");
 		//isSkilling = animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill3");
 		isAttacking = Input.GetButtonDown( "Fire1" );
