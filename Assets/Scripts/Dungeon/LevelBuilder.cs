@@ -14,6 +14,9 @@ public class LevelBuilder: MonoBehaviour {
 	public bool RoomIsDone = false;
 	public LayerMask chestAvoidanceLayer;
 
+
+	private bool _RoomIsDone = false;
+
 	List<Doorway> availableDoorways = new List<Doorway>();
 
 	StartRoom startRoom;
@@ -28,37 +31,33 @@ public class LevelBuilder: MonoBehaviour {
 		StartCoroutine( GenerateLevel() );
 	}
 
-    //private void Update() {
-    //	if(Input.GetKey( KeyCode.R )) {
-    //		ResetLevelGenerator();
-    //	}
-    //}
+	//private void Update() {
+	//	if(Input.GetKey( KeyCode.R )) {
+	//		ResetLevelGenerator();
+	//	}
+	//}
 
-    private void Update()
-    {
-        if (RoomIsDone && placedRooms.Count == 0)
-        {
-			player = Instantiate(playerPrefab) as GameObject;
+	private void Update() {
+
+		if(_RoomIsDone == true) {
+			player = Instantiate( playerPrefab ) as GameObject;
 			player.transform.position = startRoom.transform.position;
 			player.transform.rotation = startRoom.transform.rotation;
 
-			GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
-			Debug.Log("ROOM : " + rooms.Length);
-			int numRoom = Random.Range(rooms.Length - 3, rooms.Length - 2);
+			//GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
+			Debug.Log( "ROOM : " + placedRooms.Count );
+			int numRoom = Random.Range( placedRooms.Count - 3, placedRooms.Count - 2 );
 
-			for (int i = 0; i < rooms.Length; i++)
-			{
-				if (i == numRoom)
-				{
+			for(int i = 0; i < placedRooms.Count; i++) {
+				if(i == numRoom) {
 					Vector3 posChest = new PositionHelper().generateRandomPosition(
-														rooms[i].transform.GetChild(0).gameObject.GetComponent<Collider>(),
+														placedRooms[i].transform.GetChild( 0 ).gameObject.GetComponent<Collider>(),
 														 0.5f,
-														   chestAvoidanceLayer);
+														   chestAvoidanceLayer );
 
-					if (GameObject.FindGameObjectsWithTag("Chest").Length < 1)
-					{
-						GameObject Key = Instantiate(key, posChest, Quaternion.identity) as GameObject;
-						Key.transform.parent = rooms[i].transform;
+					if(GameObject.FindGameObjectsWithTag( "Chest" ).Length < 1) {
+						GameObject Key = Instantiate( key, posChest, Quaternion.identity ) as GameObject;
+						Key.transform.parent = placedRooms[i].transform;
 					}
 				}
 			}
@@ -67,11 +66,12 @@ public class LevelBuilder: MonoBehaviour {
 			var navNeshes = navMeshSurface.GetComponents<NavMeshSurface>();
 			navNeshes[0].BuildNavMesh();
 			navNeshes[1].BuildNavMesh();
+			_RoomIsDone = false;
 		}
-		
+
 	}
 
-    public IEnumerator GenerateLevel() {
+	public IEnumerator GenerateLevel() {
 		WaitForSeconds startup = new WaitForSeconds( 1 );
 		WaitForFixedUpdate interval = new WaitForFixedUpdate();
 
@@ -98,8 +98,8 @@ public class LevelBuilder: MonoBehaviour {
 		Debug.Log( "Level generation finished" );
 
 		RoomIsDone = true;
+		_RoomIsDone = true;
 
-		
 	}
 
 	void PlaceStartRoom() {
@@ -273,14 +273,14 @@ public class LevelBuilder: MonoBehaviour {
 		foreach(Room room in placedRooms) {
 			Destroy( room.gameObject );
 		}
-		Destroy(player);
+		Destroy( player );
 
 		// Clear lists
 		placedRooms.Clear();
 		availableDoorways.Clear();
 
 		RoomIsDone = false;
-
+		_RoomIsDone = false;
 		// Reset coroutine
 		StartCoroutine( "GenerateLevel" );
 	}
