@@ -7,6 +7,11 @@ public class WeaponStats: MonoBehaviour {
 	public int att2;
 	public int att3;
 	public int att4;
+
+	public float colldownAtt2;
+	public float colldownAtt3;
+	public float colldownAtt4;
+
 	private CombatCondition condition;
 
 	void Start() {
