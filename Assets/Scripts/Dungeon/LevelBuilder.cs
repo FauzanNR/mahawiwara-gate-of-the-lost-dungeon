@@ -7,12 +7,14 @@ public class LevelBuilder: MonoBehaviour {
 	public Room startRoomPrefab, endRoomPrefab;
 	public List<Room> roomPrefabs = new List<Room>();
 	public Vector2 iterationRange = new Vector2( 3, 10 );
-    public NavMeshSurface navMeshSurface;
+	public GameObject navMeshSurface;
 
-    public GameObject key;
-    public GameObject playerPrefab;
+	public GameObject key;
+	public GameObject playerPrefab;
+	public bool RoomIsDone = false;
+	public LayerMask chestAvoidanceLayer;
 
-    List<Doorway> availableDoorways = new List<Doorway>();
+	List<Doorway> availableDoorways = new List<Doorway>();
 
 	StartRoom startRoom;
 	EndRoom endRoom;
@@ -23,10 +25,53 @@ public class LevelBuilder: MonoBehaviour {
 
 	void Start() {
 		roomLayerMask = LayerMask.GetMask( "Room" );
-		StartCoroutine( "GenerateLevel" );
+		StartCoroutine( GenerateLevel() );
 	}
 
-	public IEnumerator GenerateLevel() {
+    //private void Update() {
+    //	if(Input.GetKey( KeyCode.R )) {
+    //		ResetLevelGenerator();
+    //	}
+    //}
+
+    private void Update()
+    {
+        if (RoomIsDone && placedRooms.Count == 0)
+        {
+			player = Instantiate(playerPrefab) as GameObject;
+			player.transform.position = startRoom.transform.position;
+			player.transform.rotation = startRoom.transform.rotation;
+
+			GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
+			Debug.Log("ROOM : " + rooms.Length);
+			int numRoom = Random.Range(rooms.Length - 3, rooms.Length - 2);
+
+			for (int i = 0; i < rooms.Length; i++)
+			{
+				if (i == numRoom)
+				{
+					Vector3 posChest = new PositionHelper().generateRandomPosition(
+														rooms[i].transform.GetChild(0).gameObject.GetComponent<Collider>(),
+														 0.5f,
+														   chestAvoidanceLayer);
+
+					if (GameObject.FindGameObjectsWithTag("Chest").Length < 1)
+					{
+						GameObject Key = Instantiate(key, posChest, Quaternion.identity) as GameObject;
+						Key.transform.parent = rooms[i].transform;
+					}
+				}
+			}
+
+
+			var navNeshes = navMeshSurface.GetComponents<NavMeshSurface>();
+			navNeshes[0].BuildNavMesh();
+			navNeshes[1].BuildNavMesh();
+		}
+		
+	}
+
+    public IEnumerator GenerateLevel() {
 		WaitForSeconds startup = new WaitForSeconds( 1 );
 		WaitForFixedUpdate interval = new WaitForFixedUpdate();
 
@@ -52,36 +97,10 @@ public class LevelBuilder: MonoBehaviour {
 		// Level generation finished
 		Debug.Log( "Level generation finished" );
 
-        /* navMeshSurface.BuildNavMesh();*/
+		RoomIsDone = true;
 
-        player = Instantiate(playerPrefab) as GameObject;
-        player.transform.position = startRoom.transform.position;
-        player.transform.rotation = startRoom.transform.rotation;
-
-        GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
-
-
-        int numRoom = Random.Range(4, rooms.Length);
-
-        for (int i = 0; i < rooms.Length; i++)
-        {
-
-            if (i == numRoom)
-            {
-                Vector3 pos = rooms[i].transform.position;
-                float X = Random.Range(pos.x - 5, pos.x + 5);
-                float Z = Random.Range(pos.z - 5, pos.z + 5);
-
-                Vector3 posChest = new Vector3(X, rooms[i].transform.position.y + 2, Z);
-
-                if (GameObject.FindGameObjectsWithTag("Chest").Length < 1)
-                {
-                    GameObject Key = Instantiate(key, posChest, Quaternion.identity) as GameObject;
-                    Key.transform.parent = rooms[i].transform;
-                }
-            }
-        }
-    }
+		
+	}
 
 	void PlaceStartRoom() {
 		// Instantiate room
@@ -254,12 +273,13 @@ public class LevelBuilder: MonoBehaviour {
 		foreach(Room room in placedRooms) {
 			Destroy( room.gameObject );
 		}
+		Destroy(player);
 
 		// Clear lists
 		placedRooms.Clear();
 		availableDoorways.Clear();
 
-		Destroy(player);
+		RoomIsDone = false;
 
 		// Reset coroutine
 		StartCoroutine( "GenerateLevel" );

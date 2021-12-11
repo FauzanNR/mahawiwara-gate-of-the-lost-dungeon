@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
+﻿using UnityEngine;
 
 public partial class NpcAnimation: MonoBehaviour {
 
@@ -15,10 +12,12 @@ public partial class NpcAnimation: MonoBehaviour {
 	}
 
 	void Update() {
+
 		changeAnimations( controller.enemyState );
 	}
 
 	void changeAnimations(NPC_STATE animationName) {
+		print( animationName );
 		animator.Play( animationName.ToString() );
 	}
 }

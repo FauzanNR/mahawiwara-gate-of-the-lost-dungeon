@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.AI;
 
 
@@ -14,7 +15,7 @@ public class NPCController: MonoBehaviour {
 	NavMeshAgent agent;
 	public NPCArea attackArea;
 	public NPCArea chaseArea;
-	public EnemyAttack attack;
+	public List<EnemyAttack> attacksPositionList;
 
 	public NPC_STATE enemyState {
 		get {
@@ -25,13 +26,15 @@ public class NPCController: MonoBehaviour {
 		}
 	}
 
-	void Start() {
+	void Awake() {
+
 		agent = GetComponent<NavMeshAgent>();
 	}
 
 	void Update() {
+		print( "movement" );
 		setState();
-		enemyAttack();
+		//enemyAttack();
 	}
 
 	void setState() {
@@ -48,16 +51,15 @@ public class NPCController: MonoBehaviour {
 				enemyState = NPC_STATE.Jump;
 			} else {
 				enemyState = NPC_STATE.Patrol;
-				//Debug.Log( "state " + movement );
 			}
 		}
 	}
 
 	void enemyAttack() {
 		if(enemyState == NPC_STATE.Attack1) {
-			attack.enabled = true;
+			attacksPositionList.ForEach( area => enabled = true );
 		} else
-			attack.enabled = false;
+			attacksPositionList.ForEach( area => enabled = false );
 	}
 
 }

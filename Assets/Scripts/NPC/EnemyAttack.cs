@@ -9,14 +9,15 @@ public class EnemyAttack: MonoBehaviour {
 	PlayerHealth playerHealth;
 
 	// Start is called before the first frame update
-/*	void Start() {
+	void Start() {
 		player = GameObject.FindGameObjectWithTag( "Player" );
 		playerHealth = player.GetComponent<PlayerHealth>();
-	}*/
+	}
 
-	/*void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter(Collider other) {
 		if(other.gameObject == player) {
 			playerHealth.TakeAttack( attackDamage );
 		}
-	}*/
+		Debug.Log( "Lagi attack" );
+	}
 }
