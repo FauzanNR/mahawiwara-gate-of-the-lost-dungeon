@@ -42,14 +42,17 @@ public class LevelBuilder : MonoBehaviour
 
 	private void Update()
 	{
-		if(Input.GetKey( KeyCode.R )) {
-			ResetLevelGenerator();
-		}
 		if (_RoomIsDone == true)
 		{
-			player = Instantiate(playerPrefab) as GameObject;
+			if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
+			{
+				player = Instantiate(playerPrefab) as GameObject;
+				player.transform.position = startRoom.transform.position;
+				player.transform.rotation = startRoom.transform.rotation;
+			}
+			/*player = Instantiate(playerPrefab) as GameObject;
 			player.transform.position = startRoom.transform.position;
-			player.transform.rotation = startRoom.transform.rotation;
+			player.transform.rotation = startRoom.transform.rotation;*/
 
 			//GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
 			Debug.Log("ROOM : " + placedRooms.Count);

@@ -10,7 +10,7 @@ public class CombatCondition: MonoBehaviour {
 	private bool isAttacking;
 	private bool isSkilling;
 	private PLAYER_STATE State;
-	public Text text;
+	/*public Text text;*/
 
 	[Header( "Reference" )]
 	private PlayerMove playermove;
@@ -39,9 +39,9 @@ public class CombatCondition: MonoBehaviour {
 		stats = GameObject.FindGameObjectWithTag("Player");
 		weaponStats = stats.GetComponentInChildren<WeaponStats>();
 
-		weaponStats.colldownAtt2 -= Time.deltaTime;
+		/*weaponStats.colldownAtt2 -= Time.deltaTime;
 		int seconds = (int)(weaponStats.colldownAtt2 % 60);
-		text.text = seconds.ToString();
+		text.text = seconds.ToString();*/
 
 		//isAttacking = animator.GetCurrentAnimatorStateInfo(1).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack3") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2");
 		//isSkilling = animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill3");
