@@ -36,19 +36,19 @@ public class CombatCondition: MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 
-		stats = GameObject.FindGameObjectWithTag("Player");
+		stats = GameObject.FindGameObjectWithTag( "Player" );
 		weaponStats = stats.GetComponentInChildren<WeaponStats>();
 
 		/*weaponStats.colldownAtt2 -= Time.deltaTime;
 		int seconds = (int)(weaponStats.colldownAtt2 % 60);
 		text.text = seconds.ToString();*/
 
-		//isAttacking = animator.GetCurrentAnimatorStateInfo(1).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack3") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2");
-		//isSkilling = animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill3");
-		isAttacking = Input.GetButtonDown( "Fire1" );
-		isSkilling = Input.GetKeyDown( KeyCode.R ) || Input.GetKeyDown( KeyCode.Q ) || Input.GetKeyDown( KeyCode.C );
-		//if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.C))
-		if(isAttacking || isSkilling) {
+		isAttacking = animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack2" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack3" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill2" );
+		isSkilling = animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill2" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill3" );
+		//isAttacking = Input.GetButtonDown( "Fire1" );
+		//isSkilling = Input.GetKeyDown( KeyCode.R ) || Input.GetKeyDown( KeyCode.Q ) || Input.GetKeyDown( KeyCode.C );
+		if(Input.GetButtonDown( "Fire1" ) || Input.GetKeyDown( KeyCode.R ) || Input.GetKeyDown( KeyCode.Q ) || Input.GetKeyDown( KeyCode.C )) {
+			//if(isAttacking || isSkilling) {
 			animator.SetLayerWeight( 1, 1 );
 			CancelInvoke( "BackToIdle" );
 			if(Input.GetButtonDown( "Fire1" ) && !isSkilling) {
