@@ -4,25 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - StartRoom
-  - Room
-  - EndRoom
-  - L Room
-  - T Room
-  - Enemy
-  - SceneManager
-  - DeckWeapon
-  - LevelBuilder
-  - Puzzle
-  - StartGame
-  - Pedang
-  - Tombak
-  - Door
-  - GameManager
-  - Peti
-  - Chest
+  - Shootable
   - WeaponPlayer
-  - PanelWeapon
+  - Room
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -32,13 +17,13 @@ TagManager:
   - UI
   - 
   - 
-  - Room
+  - Lighting
+  - Ground
+  - Postprocessing
   - Character
   - Obstacle
   - Obstacle1
-  - 
-  - 
-  - 
+  - Room
   - 
   - 
   - 
@@ -57,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

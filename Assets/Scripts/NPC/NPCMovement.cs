@@ -31,16 +31,14 @@ public class NPCMovement: MonoBehaviour {
 			controller.enemyState == NPC_STATE.Idle && seconds % IdleTime == 0) {
 			seconds = 0;
 			Move( randomPosition.generateRandomPosition( chaseArea, 1f, avoidanceLayer ) );
+		} else if(controller.enemyState == NPC_STATE.Attack1) {
+			transform.LookAt( player.transform.position );
 		}
 	}
 
 
 	void Move(Vector3 destination) {
-		Vector3 lookPos = destination - transform.position;
-		lookPos.y = 0;
-		Quaternion rotation = Quaternion.LookRotation( lookPos );
-		transform.rotation = Quaternion.Slerp( transform.rotation, rotation, 0.5f );
-
+		transform.LookAt( destination );
 		agent.SetDestination( destination );
 	}
 }

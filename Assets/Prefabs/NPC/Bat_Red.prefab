@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000014236083480}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingRootControl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   - {fileID: 4000013720268978}
   m_Father: {fileID: 4000012707299362}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 19.02632, y: -42.6845, z: -10.190169}
+  m_LocalEulerAnglesHint: {x: 7.1665473, y: 6.2012863, z: 5.0242953}
 --- !u!1 &1000010047424282
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010140710524}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ Transform:
   - {fileID: 4000013484149166}
   m_Father: {fileID: 4000012844489400}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 25.915207, y: 24.583582, z: -5.78232}
+  m_LocalEulerAnglesHint: {x: 3.4236498, y: -5.930368, z: -7.3536386}
 --- !u!1 &1000010065896452
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011714347276}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingTail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010834928324}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWingTailControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ Transform:
   - {fileID: 4000012042457698}
   m_Father: {fileID: 4000013720268978}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.17490202, y: 0.38232958, z: 0.001794175}
+  m_LocalEulerAnglesHint: {x: 4.5995784, y: 6.26356, z: 6.8549104}
 --- !u!1 &1000010121058884
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012042457698}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWingTair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010703331178}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingRootControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ Transform:
   - {fileID: 4000012804145000}
   m_Father: {fileID: 4000012707299362}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 13.316286, y: 43.897182, z: 11.318155}
+  m_LocalEulerAnglesHint: {x: -1.4683459, y: -3.895089, z: -1.5490534}
 --- !u!1 &1000010218802528
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013075809124}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWingTair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011205811716}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingTail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013349350872}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ Transform:
   - {fileID: 4000011743842282}
   m_Father: {fileID: 4000010418948490}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 23.328747, y: 25.173534, z: 5.5359406}
+  m_LocalEulerAnglesHint: {x: 4.726498, y: 0.87960535, z: 1.9037148}
 --- !u!1 &1000010642794460
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000014132318912}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: NoseControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011258812582}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 1.5042202e-10, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.7228815e-11, y: 0, z: 0}
 --- !u!1 &1000010673419774
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013720268978}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ Transform:
   - {fileID: 4000010834928324}
   m_Father: {fileID: 4000014236083480}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 7.964112, y: -30.571878, z: -3.0186183}
+  m_LocalEulerAnglesHint: {x: 9.124392, y: -10.974328, z: 6.8889933}
 --- !u!1 &1000011339104896
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012199276120}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ Transform:
   - {fileID: 4000013225186798}
   m_Father: {fileID: 4000012804145000}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 9.015841, y: 32.399315, z: 4.593518}
+  m_LocalEulerAnglesHint: {x: 2.928724, y: -38.457535, z: -16.766504}
 --- !u!1 &1000011372170434
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011688490240}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWing5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013676547916}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWingTailControl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ Transform:
   - {fileID: 4000013075809124}
   m_Father: {fileID: 4000011681332986}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -0.05611217, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.1925993, z: 0}
 --- !u!1 &1000011496811780
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011849501742}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ Transform:
   - {fileID: 4000012615428720}
   m_Father: {fileID: 4000011681332986}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 11.58861, y: -37.87504, z: 1.9892249}
+  m_LocalEulerAnglesHint: {x: 7.165935, y: 12.296947, z: 29.051596}
 --- !u!1 &1000011564724210
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012804145000}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ Transform:
   - {fileID: 4000012199276120}
   m_Father: {fileID: 4000010703331178}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 10.054357, y: 31.731094, z: 4.5057216}
+  m_LocalEulerAnglesHint: {x: 10.279584, y: 8.657056, z: -7.3176193}
 --- !u!1 &1000011593744314
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,9 +510,9 @@ GameObject:
   - component: {fileID: 1764747340983942579}
   - component: {fileID: 382086972541747223}
   - component: {fileID: 4060007441177234603}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Bat_Red
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
   chaseArea: {fileID: 4051654932183955082}
   avoidanceLayer:
     serializedVersion: 2
-    m_Bits: 3584
+    m_Bits: 15360
   IdleTime: 3
 --- !u!195 &6735540709022916472
 NavMeshAgent:
@@ -579,7 +579,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000011593744314}
   m_Enabled: 1
-  m_AgentTypeID: 1479372276
+  m_AgentTypeID: -1372625422
   m_Radius: 0.5
   m_Speed: 5
   m_Acceleration: 34
@@ -681,7 +681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011682924252}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ Transform:
   - {fileID: 4000010418948490}
   m_Father: {fileID: 4000013314423388}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.9884458, y: 26.722168, z: 47.52635}
+  m_LocalEulerAnglesHint: {x: 42.94086, y: -34.030388, z: 43.958637}
 --- !u!1 &1000012014750926
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011831896974}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +733,7 @@ Transform:
   - {fileID: 4000010654932268}
   m_Father: {fileID: 4000012199276120}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 19.998806, y: 34.120956, z: -11.397646}
+  m_LocalEulerAnglesHint: {x: 7.702229, y: -2.407319, z: -21.872395}
 --- !u!1 &1000012031292310
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000014262995000}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +764,7 @@ Transform:
   - {fileID: 4000011205811716}
   m_Father: {fileID: 4000012804145000}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.3832889, y: -0.5719591, z: -0.46626115}
+  m_LocalEulerAnglesHint: {x: -7.2470145, y: -8.206621, z: -7.398681}
 --- !u!1 &1000012082499464
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000014103056792}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +795,7 @@ Transform:
   - {fileID: 4000011579012298}
   m_Father: {fileID: 4000012818735496}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 15.355698, y: 47.67806, z: -45.388405}
+  m_LocalEulerAnglesHint: {x: 0.65672207, y: -0.70849955, z: -57.4814}
 --- !u!1 &1000012103934752
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010276232794}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: NoseJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010514019456}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWingRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ Transform:
   - {fileID: 4000013314423388}
   m_Father: {fileID: 4000012818735496}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -21.09411, y: 133.63765, z: 133.89359}
+  m_LocalEulerAnglesHint: {x: -9.468912, y: -174.53854, z: 119.596695}
 --- !u!1 &1000012352302140
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011743842282}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWing5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +897,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011531103456}
-  m_Layer: 9
+  - component: {fileID: 8621547769659578715}
+  - component: {fileID: 2245406991744708322}
+  - component: {fileID: 7264149141561695821}
+  m_Layer: 11
   m_Name: RootJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,6 +923,47 @@ Transform:
   m_Father: {fileID: 4000011258812582}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8621547769659578715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012431671112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d10f74520265f04ba5cd7d44aa8bb6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 100
+  currHealth: 0
+  attack: 10
+--- !u!135 &2245406991744708322
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012431671112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.028
+  m_Center: {x: -0.015, y: 0, z: 0}
+--- !u!135 &7264149141561695821
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012431671112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.028
+  m_Center: {x: -0.015, y: 0, z: 0}
 --- !u!1 &1000012450326796
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,7 +973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012844489400}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +994,7 @@ Transform:
   - {fileID: 4000010140710524}
   m_Father: {fileID: 4000011579012298}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -8.495713, y: 27.310638, z: 65.44097}
+  m_LocalEulerAnglesHint: {x: 46.67629, y: -23.9713, z: 50.21412}
 --- !u!1 &1000012521613348
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +1004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012707299362}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: HeadControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +1036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013225186798}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1057,7 @@ Transform:
   - {fileID: 4000011880727732}
   m_Father: {fileID: 4000012199276120}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0.08547381, y: 1.3008859, z: -2.706017}
+  m_LocalEulerAnglesHint: {x: 5.551558, y: -5.9642158, z: 2.837433}
 --- !u!1 &1000013003701192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +1067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011681332986}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1090,7 @@ Transform:
   - {fileID: 4000010231870480}
   m_Father: {fileID: 4000013720268978}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 14.116868, y: -31.760426, z: 13.625519}
+  m_LocalEulerAnglesHint: {x: -4.9670634, y: 40.156555, z: 17.346313}
 --- !u!1 &1000013007549066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,9 +1100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000014270920404}
-  - component: {fileID: 6073703789460913869}
-  - component: {fileID: 7898939675300846902}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: RIG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,34 +1122,6 @@ Transform:
   m_Father: {fileID: 4000010273486942}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6073703789460913869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013007549066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d10f74520265f04ba5cd7d44aa8bb6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startHealth: 100
-  currHealth: 0
-  attack: 10
---- !u!135 &7898939675300846902
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013007549066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.028
-  m_Center: {x: 0, y: 0.015, z: 0}
 --- !u!1 &1000013041735272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012615428720}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1137,7 +1151,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011849501742}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 10.802545, y: -32.57163, z: 8.051538}
+  m_LocalEulerAnglesHint: {x: 7.081766, y: -2.4875264, z: 15.009392}
 --- !u!1 &1000013053588352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010418948490}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1168,7 +1182,7 @@ Transform:
   - {fileID: 4000013349350872}
   m_Father: {fileID: 4000011682924252}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.618702, y: 32.973484, z: 5.7046857}
+  m_LocalEulerAnglesHint: {x: -0.053462297, y: -16.030064, z: -11.802452}
 --- !u!1 &1000013223543898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,7 +1192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010654932268}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1198,7 +1212,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011831896974}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.338951, y: 34.38464, z: -11.49525}
+  m_LocalEulerAnglesHint: {x: 9.489395, y: -8.078172, z: -23.962872}
 --- !u!1 &1000013657395582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,7 +1222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011880727732}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingTail3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013431542788}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: NoseTipJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1268,7 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013484149166}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1289,7 +1303,7 @@ Transform:
   - {fileID: 4000011688490240}
   m_Father: {fileID: 4000010140710524}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 31.758621, y: 20.293242, z: -1.1699731}
+  m_LocalEulerAnglesHint: {x: 1.1663074, y: -10.152111, z: -4.6872935}
 --- !u!1 &1000013808881056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013880433244}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWingTair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1329,7 +1343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011258812582}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Bat1Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1352,7 +1366,7 @@ Transform:
   - {fileID: 4000011531103456}
   m_Father: {fileID: 4000014270920404}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 14.759326, y: -2.6032364e-12, z: 2.5693103e-13}
+  m_LocalEulerAnglesHint: {x: 14.879033, y: 0, z: 0}
 --- !u!1 &1000013930278250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010231870480}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWingTailControl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1383,7 +1397,7 @@ Transform:
   - {fileID: 4000013880433244}
   m_Father: {fileID: 4000011681332986}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -3.2746487, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.7232104, y: 3.7071536, z: -2.5213594}
 --- !u!1 &1000014009797714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,7 +1407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011579012298}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1414,7 +1428,7 @@ Transform:
   - {fileID: 4000012844489400}
   m_Father: {fileID: 4000014103056792}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -19.404495, y: 29.207697, z: -5.5740128}
+  m_LocalEulerAnglesHint: {x: -0.83163226, y: 14.769087, z: -8.485106}
 --- !u!1 &1000014092125654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013124011950}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: lWingControl2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1445,7 +1459,7 @@ Transform:
   - {fileID: 4000011714347276}
   m_Father: {fileID: 4000012199276120}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.36497712, y: -0.08603775, z: -0.9310394}
+  m_LocalEulerAnglesHint: {x: 6.912391, y: -6.4312644, z: -0.23146512}
 --- !u!1 &1000014161761464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012703179492}
   - component: {fileID: 137000012621358704}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1559,7 +1573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013314423388}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: rWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1594,7 @@ Transform:
   - {fileID: 4000011682924252}
   m_Father: {fileID: 4000010514019456}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -19.850286, y: 26.749725, z: -6.1192765}
+  m_LocalEulerAnglesHint: {x: -3.3493237, y: 15.151163, z: -8.767176}
 --- !u!1 &1000014225017644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,7 +1604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012818735496}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: HeadJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1613,7 +1627,7 @@ Transform:
   - {fileID: 4000010514019456}
   m_Father: {fileID: 4000011531103456}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1.5916649e-17, y: 3.0888327e-15, z: 90}
+  m_LocalEulerAnglesHint: {x: 6.406687e-17, y: 1.1446583e-15, z: 90}
 --- !u!1 &505818829809183611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,7 +1639,7 @@ GameObject:
   - component: {fileID: 4877593794655423664}
   - component: {fileID: 2197893260372962782}
   - component: {fileID: 4051654932183955082}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: ChaseArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,7 +1696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6327246056568766032}
   - component: {fileID: 6177718611996390442}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1776,7 +1790,7 @@ GameObject:
   - component: {fileID: 5982510025995564802}
   - component: {fileID: 3724859033687649319}
   - component: {fileID: 2091096212100863578}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1834,7 +1848,7 @@ GameObject:
   - component: {fileID: 4271851396661815091}
   - component: {fileID: 2154789619828528142}
   - component: {fileID: 8501041492732868512}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

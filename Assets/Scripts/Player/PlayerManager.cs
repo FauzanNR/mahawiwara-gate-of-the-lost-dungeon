@@ -8,6 +8,7 @@ using System.IO;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject[] weapon;
+    public BerkahAlam berkah;
     public GameObject keyObject;
 
     private InteractableObject interactable;
@@ -35,7 +36,7 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        
+
         if (interactable)
         {
             ChoiceWeapon();
@@ -45,6 +46,8 @@ public class PlayerManager : MonoBehaviour
             OpenDoor();
         }
     }
+
+    void playParticle() => berkah.playParticle();// called in animation event
 
     void ChoiceWeapon()
     {
@@ -95,7 +98,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (other.GetComponent<InteractableObject>() != null)
         {
-            Cursor.lockState = CursorLockMode.None;
             interactable = other.GetComponent<InteractableObject>();
             interactable.onInteracting();
         }
@@ -106,7 +108,6 @@ public class PlayerManager : MonoBehaviour
         if (other.GetComponent<InteractableObject>() != null)
         {
             interactable.DeSelected();
-            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

@@ -64253,7 +64253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer:
     serializedVersion: 2
-    m_Bits: 3584
+    m_Bits: 15872
   maxNPCNumber: 5
   ground: {fileID: 2327104784158385835}
   npcPrefab:

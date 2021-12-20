@@ -18,6 +18,5 @@ public class EnemyAttack: MonoBehaviour {
 		if(other.gameObject == player) {
 			playerHealth.TakeAttack( attackDamage );
 		}
-		Debug.Log( "Lagi attack" );
 	}
 }

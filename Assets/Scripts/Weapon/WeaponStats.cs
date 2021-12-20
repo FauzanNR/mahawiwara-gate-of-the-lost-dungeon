@@ -19,10 +19,9 @@ public class WeaponStats: MonoBehaviour {
 		condition = player.GetComponent<CombatCondition>();
 
 	}
-	public int Damage() {
+	public virtual int DamageWeaponSkill() {
 		switch(condition.playerState) {
 			case PLAYER_STATE.att1:
-				print( att1 );
 				return att1;
 			case PLAYER_STATE.att2:
 				return att2;

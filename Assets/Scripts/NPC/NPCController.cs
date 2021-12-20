@@ -7,11 +7,13 @@ using UnityEngine.AI;
 [RequireComponent( typeof( NavMeshAgent ) )]
 [RequireComponent( typeof( AgentLinkMover ) )]
 [RequireComponent( typeof( Animator ) )]
-[RequireComponent( typeof( NpcAnimation ) )]
+[RequireComponent( typeof( NPCAnimation ) )]
+//[RequireComponent( typeof( NPCHealth ) )] don't forget to add manual
 
 public class NPCController: MonoBehaviour {
 
 	private NPC_STATE State;
+	private GameObject player;
 	NavMeshAgent agent;
 	public NPCArea attackArea;
 	public NPCArea chaseArea;
@@ -27,23 +29,20 @@ public class NPCController: MonoBehaviour {
 	}
 
 	void Awake() {
-
 		agent = GetComponent<NavMeshAgent>();
+		player = GameObject.FindGameObjectWithTag( "Player" );
 	}
 
-	void Update() {
-		print( "movement" );
-		setState();
-		//enemyAttack();
-	}
+	void Update() => setState();
 
 	void setState() {
 		var movement = System.Math.Abs( agent.velocity.magnitude / agent.speed );
 
-		if(chaseArea.isTriggered && attackArea.isTriggered) {
-			enemyState = NPC_STATE.Attack1;
-		} else if(chaseArea.isTriggered) {
-			enemyState = NPC_STATE.Run;
+		if(chaseArea.isTriggered) {
+			var distance = Vector3.Distance( player.transform.position, transform.position );
+			if(chaseArea.isTriggered && attackArea.isTriggered) {
+				enemyState = NPC_STATE.Attack1;
+			} else if(distance > 2.5f) enemyState = NPC_STATE.Run;
 		} else {
 			if(movement == 0) {
 				enemyState = NPC_STATE.Idle;
@@ -53,13 +52,6 @@ public class NPCController: MonoBehaviour {
 				enemyState = NPC_STATE.Patrol;
 			}
 		}
-	}
-
-	void enemyAttack() {
-		if(enemyState == NPC_STATE.Attack1) {
-			attacksPositionList.ForEach( area => enabled = true );
-		} else
-			attacksPositionList.ForEach( area => enabled = false );
 	}
 
 }

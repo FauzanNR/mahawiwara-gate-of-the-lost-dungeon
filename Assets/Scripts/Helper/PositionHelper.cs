@@ -4,7 +4,6 @@ using UnityEngine;
 class PositionHelper {
 
 	public Vector3 generateRandomPosition(Collider ground, float scale, LayerMask layer) {
-		Debug.Log( "generateRandomPosition " );
 
 		float moveAreaX = ground.bounds.size.x / 2;
 		float moveAreaZ = ground.bounds.size.z / 2;
@@ -22,7 +21,6 @@ class PositionHelper {
 			targetCoordsX = center.x + Random.Range( -moveAreaX * scale, moveAreaX * scale );
 			targetCoordsZ = center.z + Random.Range( -moveAreaZ * scale, moveAreaZ * scale );
 			position = new Vector3( targetCoordsX, targetCoordsY, targetCoordsZ );
-			Debug.Log( "collide" );
 		}
 		return position;
 	}

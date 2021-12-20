@@ -44,10 +44,10 @@ public class LevelBuilder : MonoBehaviour
 	{
 		if (_RoomIsDone == true)
 		{
-			if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
-			{
-				player = Instantiate(playerPrefab) as GameObject;
-				player.transform.position = startRoom.transform.position;
+            player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                player.transform.position = startRoom.transform.position;
 				player.transform.rotation = startRoom.transform.rotation;
 			}
 			/*player = Instantiate(playerPrefab) as GameObject;
