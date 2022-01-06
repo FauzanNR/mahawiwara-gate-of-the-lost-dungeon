@@ -12,12 +12,14 @@ using UnityEngine.AI;
 
 public class NPCController: MonoBehaviour {
 
+	private Rigidbody rigidbody;
 	private NPC_STATE State;
 	private GameObject player;
 	NavMeshAgent agent;
-	public NPCArea attackArea;
-	public NPCArea chaseArea;
+	public AreaHelper attackArea;
+	public AreaHelper chaseArea;
 	public List<EnemyAttack> attacksPositionList;
+	public NPCHealth health;
 
 	public NPC_STATE enemyState {
 		get {
@@ -28,6 +30,9 @@ public class NPCController: MonoBehaviour {
 		}
 	}
 
+	void Start() {
+
+	}
 	void Awake() {
 		agent = GetComponent<NavMeshAgent>();
 		player = GameObject.FindGameObjectWithTag( "Player" );

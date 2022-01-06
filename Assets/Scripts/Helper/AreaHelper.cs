@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCArea: MonoBehaviour {
+public class AreaHelper: MonoBehaviour {
 	public bool isTriggered = false;
+	private Collider obj;
 
-	void OnTriggerEnter(Collider otherS) {
+	public Collider colliderObj() => obj;
+
+	void OnTriggerEnter(Collider other) {
 		isTriggered = true;
+		obj = other;
 	}
 
 	void OnTriggerExit(Collider other) {

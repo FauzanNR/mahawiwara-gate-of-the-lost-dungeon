@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class NPCHealth: MonoBehaviour {
 	public int startHealth = 100;
@@ -18,16 +19,15 @@ public class NPCHealth: MonoBehaviour {
 
 	void getWeapon() => weaponPlayer = GameObject.FindGameObjectWithTag( "Player" );
 
-
-
 	void Update() {
 
 		if(currHealth <= 0) {
-			if(this.transform.parent != null) {
-				Destroy( this.transform.parent.gameObject );
-			}
-			Destroy( this.gameObject );
+			Invoke( nameof( destroy ), 2 );
 		}
+	}
+
+	void destroy() {
+		Destroy( this.transform.root.gameObject );
 	}
 
 	public void getDamage(int damage) {
@@ -36,13 +36,10 @@ public class NPCHealth: MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 
-		var weaponDamage = weaponPlayer.GetComponentsInChildren<WeaponStats>();
+		print( "n" + other.gameObject.name );
 
-		foreach(WeaponStats weapon in weaponDamage) {
-			if(other.GetComponent<WeaponStats>() != null) {
-				getDamage( weapon.DamageWeaponSkill() );
-			}
+		if(other.TryGetComponent( out WeaponStats weapon )) {
+			getDamage( weapon.DamageWeaponSkill() );
 		}
-
 	}
 }

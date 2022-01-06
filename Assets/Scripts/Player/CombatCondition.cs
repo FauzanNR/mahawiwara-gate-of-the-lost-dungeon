@@ -45,50 +45,39 @@ public class CombatCondition: MonoBehaviour {
 
 		isAttacking = animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack2" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack3" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill2" );
 		isSkilling = animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill2" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill3" );
-        var berkahAttack = animator.GetCurrentAnimatorStateInfo(2).IsName(PLAYER_STATE.BerkahAttack.ToString());
+		var berkahAttack = animator.GetCurrentAnimatorStateInfo( 2 ).IsName( PLAYER_STATE.BerkahAttack.ToString() );
 
-        if (!berkahAttack)
-        {
-            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.C))
-            {
-                //if(isAttacking || isSkilling) {
-                animator.SetLayerWeight(1, 1);
-                CancelInvoke("BackToIdle");
-                if (Input.GetButtonDown("Fire1") && !isSkilling)
-                {
-                    playerState = PLAYER_STATE.att1;
-                    MeleAttack();
-                }
-                else if (Input.GetKeyDown(KeyCode.Q) && !isAttacking)
-                {
-                    playerState = PLAYER_STATE.att2;
-                    animator.Play("Skill1", 1);
-                    ComboReset();
-                }
-                else if (Input.GetKeyDown(KeyCode.R) && !isAttacking)
-                {
-                    playerState = PLAYER_STATE.att3;
-                    animator.Play("Skill2", 1);
-                    ComboReset();
-                }
-                else if (Input.GetKeyDown(KeyCode.C) && !isAttacking)
-                {
-                    playerState = PLAYER_STATE.att4;
-                    animator.Play("Skill3", 1);
-                    ComboReset();
-                }
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3) && !isAttacking && !isSkilling)
-            {
-                print("click 3");
-                CancelInvoke("BackToIdle");
-                animator.SetLayerWeight(2, 1);
-                playerState = PLAYER_STATE.BerkahAttack;
-                animator.Play(playerState.ToString(), 2);// replace with playerManager.Berkah(); level manager
-            }
-        }
+		if(!berkahAttack) {
+			if(Input.GetButtonDown( "Fire1" ) || Input.GetKeyDown( KeyCode.R ) || Input.GetKeyDown( KeyCode.Q ) || Input.GetKeyDown( KeyCode.C )) {
+				//if(isAttacking || isSkilling) {
+				animator.SetLayerWeight( 1, 1 );
+				CancelInvoke( "BackToIdle" );
+				if(Input.GetButtonDown( "Fire1" ) && !isSkilling) {
+					playerState = PLAYER_STATE.att1;
+					MeleAttack();
+				} else if(Input.GetKeyDown( KeyCode.Q ) && !isAttacking) {
+					playerState = PLAYER_STATE.att2;
+					animator.Play( "Skill1", 1 );
+					ComboReset();
+				} else if(Input.GetKeyDown( KeyCode.R ) && !isAttacking) {
+					playerState = PLAYER_STATE.att3;
+					animator.Play( "Skill2", 1 );
+					ComboReset();
+				} else if(Input.GetKeyDown( KeyCode.C ) && !isAttacking) {
+					playerState = PLAYER_STATE.att4;
+					animator.Play( "Skill3", 1 );
+					ComboReset();
+				}
+			} else if(Input.GetKeyDown( KeyCode.Alpha3 ) && !isAttacking && !isSkilling) {
 
-        Invoke("BackToIdle", 3);
+				CancelInvoke( "BackToIdle" );
+				animator.SetLayerWeight( 2, 1 );
+				playerState = PLAYER_STATE.BerkahAttack;
+				animator.Play( playerState.ToString(), 2 );// replace with playerManager.Berkah(); level manager
+			}
+		}
+
+		Invoke( "BackToIdle", 3 );
 	}
 
 	void MeleAttack() {
@@ -121,8 +110,8 @@ public class CombatCondition: MonoBehaviour {
 		comboStep = 0;
 	}
 	public void BackToIdle() {
-        playerState = PLAYER_STATE.Idle;
+		playerState = PLAYER_STATE.Idle;
 		animator.SetLayerWeight( 1, 0 );
-        animator.SetLayerWeight(2, 0);
+		animator.SetLayerWeight( 2, 0 );
 	}
 }
