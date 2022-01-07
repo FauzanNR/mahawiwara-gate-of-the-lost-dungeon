@@ -10,12 +10,17 @@ public class PlayerManager : MonoBehaviour
     public GameObject[] weapon;
     public BerkahAlam berkah;
     public GameObject keyObject;
+    public GameObject pausePanel;
+
 
     private InteractableObject interactable;
     private string weaponName;
+    private bool isPaused;
 
     private void Start()
     {
+        pausePanel.SetActive(false);
+
         PlayerDataManager.Load();
         weaponName = PlayerDataManager.player.weaponName;
         if (weaponName != null)
@@ -44,6 +49,18 @@ public class PlayerManager : MonoBehaviour
             OpenChest();
 
             OpenDoor();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
         }
     }
 
@@ -109,5 +126,22 @@ public class PlayerManager : MonoBehaviour
         {
             interactable.DeSelected();
         }
+    }
+    public void Pause()
+    {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Resume()
+    {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

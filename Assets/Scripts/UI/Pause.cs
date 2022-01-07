@@ -4,16 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class Pause : MonoBehaviour
 {
     public Text textMusic;
     public Text textSFX;
 
-    public void Start()
+    void Start()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-
         if (Sound.Instance.music.mute == false)
         {
             textMusic.text = "ON";
