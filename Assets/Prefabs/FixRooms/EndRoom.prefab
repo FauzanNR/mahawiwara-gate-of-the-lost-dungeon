@@ -1,69 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &75705398544512997
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1729104539605451758}
-  - component: {fileID: 33155935038580945}
-  - component: {fileID: 252155594746465203}
-  m_Layer: 0
-  m_Name: NPCSpawnEnter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1729104539605451758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75705398544512997}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.9, y: 0, z: -50.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6711803399597293648}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &33155935038580945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75705398544512997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2da27c98f41fc8ff96752f9c67d9015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer:
-    serializedVersion: 2
-    m_Bits: 3584
-  maxNPCNumber: 1
-  ground: {fileID: 5784718684276663776}
-  npcPrefab:
-  - {fileID: 1000011593744314, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
---- !u!65 &252155594746465203
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75705398544512997}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.9810066, y: 6.5037937, z: 0.59000015}
-  m_Center: {x: 10.078577, y: -10, z: -5}
 --- !u!1 &408761258277893373
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +12,7 @@ GameObject:
   - component: {fileID: 4311167336342910411}
   - component: {fileID: 7950589213943052681}
   - component: {fileID: 2597629881818449070}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: pilar6_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +105,7 @@ GameObject:
   - component: {fileID: 7344767131713788463}
   - component: {fileID: 2503319786565373}
   - component: {fileID: 2613418593743864370}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4921,7 +4857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3779271651725645142}
   - component: {fileID: 2490117380271874783}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Point Light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5015,7 +4951,7 @@ GameObject:
   - component: {fileID: 4579845983926065235}
   - component: {fileID: 2827938737197052723}
   - component: {fileID: 4652170528184862593}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: torch_molten_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5110,7 +5046,7 @@ GameObject:
   - component: {fileID: 7248030487983615730}
   - component: {fileID: 104448489065683488}
   - component: {fileID: 2683949407936984815}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9864,7 +9800,7 @@ GameObject:
   - component: {fileID: 7763972751252082536}
   - component: {fileID: 62083401920841183}
   - component: {fileID: 3571809870677899729}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: pilar2_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9957,7 +9893,7 @@ GameObject:
   - component: {fileID: 8542290712558851194}
   - component: {fileID: 3773168260346949728}
   - component: {fileID: 4601368531473815625}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: NonKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10035,7 +9971,7 @@ GameObject:
   - component: {fileID: 2041498242553867209}
   - component: {fileID: 6996381297903365798}
   - component: {fileID: 4503482611786175095}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: FireDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14789,7 +14725,7 @@ GameObject:
   - component: {fileID: 382072464141901328}
   - component: {fileID: 1769087235417136975}
   - component: {fileID: 7704300792174497450}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: smallrock3_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14883,7 +14819,7 @@ GameObject:
   - component: {fileID: 465846394494334076}
   - component: {fileID: 159003115835553536}
   - component: {fileID: 8349994762077466922}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: torch_molten_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14979,7 +14915,7 @@ GameObject:
   - component: {fileID: 1856782729829011304}
   - component: {fileID: 2413157499335300483}
   - component: {fileID: 6222943009562072027}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: cliff1_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15073,7 +15009,7 @@ GameObject:
   - component: {fileID: 4405133080094467192}
   - component: {fileID: 6443250278660136467}
   - component: {fileID: 7964877727758177662}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: dungeon_arch.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15167,7 +15103,7 @@ GameObject:
   - component: {fileID: 7729754872475600117}
   - component: {fileID: 6890461991710276688}
   - component: {fileID: 1574948769897492103}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: pilar3_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15260,7 +15196,7 @@ GameObject:
   - component: {fileID: 8627275403003558998}
   - component: {fileID: 1323780450121746564}
   - component: {fileID: 3896561261768287307}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20014,7 +19950,7 @@ GameObject:
   - component: {fileID: 5838656587907511824}
   - component: {fileID: 1427691412048249730}
   - component: {fileID: 7782181465208042108}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: smallrock2_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20109,6 +20045,7 @@ GameObject:
   - component: {fileID: 8121458948544668783}
   - component: {fileID: 5697449853423268233}
   - component: {fileID: 5193507177207093829}
+  - component: {fileID: 8638148004366130728}
   m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
@@ -20128,7 +20065,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 6711803399597293648}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -90}
 --- !u!33 &8203106823264856634
 MeshFilter:
@@ -20200,9 +20137,22 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 57c19b727ede15b4abeb959774a247e9, type: 3}
+--- !u!114 &8638148004366130728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779563542507495776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69ab27d2821836fabcf1317960d9bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTriggered: 0
 --- !u!1 &1799846982630139444
 GameObject:
   m_ObjectHideFlags: 0
@@ -20215,7 +20165,7 @@ GameObject:
   - component: {fileID: 5379358961316005599}
   - component: {fileID: 6903353811140686123}
   - component: {fileID: 5126672203198613489}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20308,7 +20258,7 @@ GameObject:
   - component: {fileID: 1009717099137846704}
   - component: {fileID: 8309075578460915935}
   - component: {fileID: 3181918605131904014}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: FireDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25061,7 +25011,7 @@ GameObject:
   - component: {fileID: 1114864947882031469}
   - component: {fileID: 8229259243220139010}
   - component: {fileID: 3266100963695575251}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: FireDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29814,7 +29764,7 @@ GameObject:
   - component: {fileID: 83724852508440347}
   - component: {fileID: 1853863140279035617}
   - component: {fileID: 3965724005795393440}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34568,7 +34518,7 @@ GameObject:
   - component: {fileID: 8614691669159791757}
   - component: {fileID: 401197790406222380}
   - component: {fileID: 5197244517704749706}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: smallrockcluster_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34662,7 +34612,7 @@ GameObject:
   - component: {fileID: 7435100985924623915}
   - component: {fileID: 4667970610822812804}
   - component: {fileID: 7813870849036561805}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: pilar4_1_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34755,7 +34705,7 @@ GameObject:
   - component: {fileID: 4242936308047751741}
   - component: {fileID: 2482255169902721991}
   - component: {fileID: 919182512608277126}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39509,7 +39459,7 @@ GameObject:
   - component: {fileID: 1613732296198644956}
   - component: {fileID: 6635373022461664590}
   - component: {fileID: 816279486693526636}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39609,7 +39559,7 @@ GameObject:
   - component: {fileID: 8573071832608034063}
   - component: {fileID: 710502929691159399}
   - component: {fileID: 4577122746027086692}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: pilar7_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39703,7 +39653,7 @@ GameObject:
   - component: {fileID: 6908783019264994004}
   - component: {fileID: 8919711594704823107}
   - component: {fileID: 5446893717963616978}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: pilar8_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39797,7 +39747,7 @@ GameObject:
   - component: {fileID: 7612067668736491502}
   - component: {fileID: 1590258982344139941}
   - component: {fileID: 1291500917118666261}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: torch_metal_0.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39890,7 +39840,7 @@ GameObject:
   - component: {fileID: 5508674329582625136}
   - component: {fileID: 2997004911624132002}
   - component: {fileID: 998636427826116973}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44644,7 +44594,7 @@ GameObject:
   - component: {fileID: 1408486168483708164}
   - component: {fileID: 3436709545930491232}
   - component: {fileID: 1070986228475147402}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: torch_leather_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44782,7 +44732,7 @@ GameObject:
   - component: {fileID: 4890645520957010486}
   - component: {fileID: 4598829235347076019}
   - component: {fileID: 1941808048165124881}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: torch_metal_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44875,7 +44825,7 @@ GameObject:
   - component: {fileID: 2854253626667955951}
   - component: {fileID: 6543907142768751488}
   - component: {fileID: 411822956201758545}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: FireDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49627,7 +49577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8316697020831703880}
   - component: {fileID: 5731405797430874469}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49672,7 +49622,7 @@ GameObject:
   - component: {fileID: 3012310021347227801}
   - component: {fileID: 3557472046430988643}
   - component: {fileID: 2300644203527364642}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54425,7 +54375,7 @@ GameObject:
   - component: {fileID: 2933558150381767748}
   - component: {fileID: 3469278469866888638}
   - component: {fileID: 2204072418156893439}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59178,7 +59128,7 @@ GameObject:
   - component: {fileID: 7666536199048371713}
   - component: {fileID: 1548366453340952587}
   - component: {fileID: 3689531511028927149}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59257,7 +59207,7 @@ GameObject:
   - component: {fileID: 2019258578210697438}
   - component: {fileID: 8386645086225560622}
   - component: {fileID: 4298787082499620051}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: smallrock1_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59407,7 +59357,7 @@ GameObject:
   - component: {fileID: 1383073092165072359}
   - component: {fileID: 7235074753024740317}
   - component: {fileID: 4579381058058008980}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: NonKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59483,9 +59433,9 @@ GameObject:
   - component: {fileID: 3393706228088078480}
   - component: {fileID: 3349165222943018693}
   - component: {fileID: 3209713925049699114}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Endroom
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59502,7 +59452,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 6711803399597293648}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3393706228088078480
 MeshFilter:
@@ -59576,7 +59526,7 @@ GameObject:
   - component: {fileID: 1936111021704878621}
   - component: {fileID: 3929438961724998791}
   - component: {fileID: 4724365055056808481}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59652,7 +59602,7 @@ GameObject:
   - component: {fileID: 539520187909319417}
   - component: {fileID: 3429243511524179895}
   - component: {fileID: 5923135717946214556}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: SM_tourch_tourch_0.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59747,7 +59697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8704837095952365733}
   - component: {fileID: 8969441177944895218}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Point Light (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59842,7 +59792,7 @@ GameObject:
   - component: {fileID: 4714860172449842540}
   - component: {fileID: 4668647959089295799}
   - component: {fileID: 7226141222853220730}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: pilar2_1_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59936,7 +59886,7 @@ GameObject:
   - component: {fileID: 6463593248436071771}
   - component: {fileID: 6452760788948696005}
   - component: {fileID: 8289398006270775002}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: pilar1_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60028,7 +59978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286162074260905946}
   - component: {fileID: 7675765999977947849}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60122,7 +60072,7 @@ GameObject:
   - component: {fileID: 66199220298052112}
   - component: {fileID: 4182896898590098996}
   - component: {fileID: 8805350490395587529}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: pilar4_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60217,7 +60167,7 @@ GameObject:
   - component: {fileID: 5526288829173987055}
   - component: {fileID: 6395525646891068749}
   - component: {fileID: 5411861535291393652}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: SM_tourch_tourch_0.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60313,7 +60263,7 @@ GameObject:
   - component: {fileID: 5349253920146809052}
   - component: {fileID: 2628630267824805019}
   - component: {fileID: 5231150768722175722}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65067,7 +65017,7 @@ GameObject:
   - component: {fileID: 6129565478214547049}
   - component: {fileID: 8002734894624834272}
   - component: {fileID: 5686061996710452495}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: cliff3_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65177,10 +65127,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 990683563939359622}
   - {fileID: 3764047897677683803}
   - {fileID: 3841769082505130134}
   - {fileID: 7706506111055181553}
-  - {fileID: 1729104539605451758}
   - {fileID: 658723669824299828}
   - {fileID: 8316697020831703880}
   - {fileID: 1354653445907072073}
@@ -65233,6 +65183,8 @@ MonoBehaviour:
   doorways:
   - {fileID: 5697449853423268233}
   meshCollider: {fileID: 3209713925049699114}
+  npcBoss: {fileID: 647632812429104079}
+  reward: {fileID: 6070851693665395229, guid: 63e33cffc8b1b69439944b6ff88d690f, type: 3}
 --- !u!1 &6296666398978247667
 GameObject:
   m_ObjectHideFlags: 0
@@ -65244,7 +65196,7 @@ GameObject:
   - component: {fileID: 5973920843337683909}
   - component: {fileID: 2100412510561030149}
   - component: {fileID: 7291697863118868807}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Magic fire pro orange (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70002,7 +69954,7 @@ GameObject:
   - component: {fileID: 3663314302937548449}
   - component: {fileID: 2611961750457509466}
   - component: {fileID: 2979606532453271097}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: pilar5_pilars_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70093,7 +70045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354653445907072073}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: ---interior---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70125,7 +70077,7 @@ GameObject:
   - component: {fileID: 7579314097625878243}
   - component: {fileID: 2805365796621962531}
   - component: {fileID: 6843733973668252769}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Magic fire pro orange (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74882,7 +74834,7 @@ GameObject:
   - component: {fileID: 8211431294309989882}
   - component: {fileID: 2283965021180496317}
   - component: {fileID: 8309216836568382412}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79634,7 +79586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6372324584847856050}
   - component: {fileID: 1052220431879006716}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79728,7 +79680,7 @@ GameObject:
   - component: {fileID: 7590516096616378651}
   - component: {fileID: 7588178749340523134}
   - component: {fileID: 2405090572106053765}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: torch_leather_0.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79822,7 +79774,7 @@ GameObject:
   - component: {fileID: 3321293915085909462}
   - component: {fileID: 1417395565321340413}
   - component: {fileID: 5561508084616084469}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: torch_wood_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79916,7 +79868,7 @@ GameObject:
   - component: {fileID: 6354407168258608010}
   - component: {fileID: 6597607355855719445}
   - component: {fileID: 5781774926904724011}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: torch_wood_0.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80010,7 +79962,7 @@ GameObject:
   - component: {fileID: 6644723766231836502}
   - component: {fileID: 199111053691321175}
   - component: {fileID: 5611195738849639006}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: smallrock4_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80104,7 +80056,7 @@ GameObject:
   - component: {fileID: 3790544569945350869}
   - component: {fileID: 4467787123312791379}
   - component: {fileID: 2402809553758312544}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: cliff2_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80197,7 +80149,7 @@ GameObject:
   - component: {fileID: 7179646888979815299}
   - component: {fileID: 1001384175936188356}
   - component: {fileID: 6991736440143240629}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84950,7 +84902,7 @@ GameObject:
   - component: {fileID: 7122668584783081310}
   - component: {fileID: 909258746816535321}
   - component: {fileID: 6952525000508270952}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89727,7 +89679,7 @@ Transform:
   m_Children:
   - {fileID: 5879087025591830350}
   m_Father: {fileID: 6711803399597293648}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!33 &1825397499931042576
 MeshFilter:
@@ -89849,7 +89801,7 @@ GameObject:
   - component: {fileID: 8897078269001066650}
   - component: {fileID: 3799154466659298138}
   - component: {fileID: 5525411267436276248}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Magic fire pro orange (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94606,7 +94558,7 @@ GameObject:
   - component: {fileID: 8791925965414652999}
   - component: {fileID: 3873862325541134215}
   - component: {fileID: 5608604263435460293}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Magic fire pro orange (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99364,7 +99316,7 @@ GameObject:
   - component: {fileID: 4112035267018156898}
   - component: {fileID: 7276644565269233818}
   - component: {fileID: 4102720816532350065}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: smallrock5_cliffs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99446,3 +99398,82 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7496911945919643960, guid: 6ed19c7f18fbfe749a3ba4542eccea1f, type: 3}
+--- !u!1001 &986755126278394840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6711803399597293648}
+    m_Modifications:
+    - target: {fileID: 1000011593744314, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_Name
+      value: Bat_Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011593744314, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9196f5609154ec64ab01ccb5f7f02f9e, type: 3}
+--- !u!114 &647632812429104079 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 382086972541747223, guid: 9196f5609154ec64ab01ccb5f7f02f9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 986755126278394840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9a52b8a6dba919d880abd2cb87efe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &990683563939359622 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000010273486942, guid: 9196f5609154ec64ab01ccb5f7f02f9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 986755126278394840}
+  m_PrefabAsset: {fileID: 0}

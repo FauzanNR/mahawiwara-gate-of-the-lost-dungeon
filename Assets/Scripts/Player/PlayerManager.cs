@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
+using System;
 
 public class PlayerManager: MonoBehaviour {
 	public GameObject[] weapon;
@@ -12,6 +13,17 @@ public class PlayerManager: MonoBehaviour {
 
 	private InteractableObject interactable;
 	private string weaponName;
+
+	void Awake() {
+		GameManager.OnStateChange += setOffPlayer;
+	}
+
+	private void setOffPlayer(GameStates states) {
+		print( states );
+		if(states == GameStates.LoadingLevel) {
+			gameObject.SetActive( false );
+		} else gameObject.SetActive( true );
+	}
 
 	private void Start() {
 		PlayerDataManager.Load();
@@ -25,6 +37,7 @@ public class PlayerManager: MonoBehaviour {
 				}
 			}
 		}
+		DontDestroyOnLoad( this.gameObject );
 	}
 
 	void Update() {
@@ -39,9 +52,10 @@ public class PlayerManager: MonoBehaviour {
 	}
 
 	void playParticle() {// called in animation event
-				   //var position = new Vector3( transform.position.x, transform.position.y, transform.position.z + 1.5f );
-				   //var berkahAlam = Instantiate( berkah, position, Quaternion.identity );
-		berkah.GetComponent<BerkahAlam>().playParticle();
+		var position = new Vector3( transform.position.x, transform.position.y, transform.position.z + 1.5f );
+		var berkahAlam = Instantiate( berkah, transform );
+		berkahAlam.transform.parent = null;
+		berkahAlam.GetComponent<BerkahAlam>().playParticle();
 	}
 
 	void ChoiceWeapon() {
@@ -63,17 +77,15 @@ public class PlayerManager: MonoBehaviour {
 	}
 
 	void OpenChest() {
-		if(interactable.name == "Chest(Clone)" && interactable.onIneteractedByPlayer() && PlayerDataManager.player.key == false) {
-			PlayerDataManager.player.key = true;
-			PlayerDataManager.Save();
+		if(interactable.tag == "Chest" && interactable.onIneteractedByPlayer() && !GameManager.Instance.isKeyFound) {
+			GameManager.Instance.isKeyFound = true;
 			keyObject.SetActive( true );
 		}
 	}
 
 	void OpenDoor() {
-		if(interactable.name == "DoorBoss" && interactable.onIneteractedByPlayer() && PlayerDataManager.player.key == true) {
-			PlayerDataManager.player.key = false;
-			PlayerDataManager.Save();
+		if(interactable.name == "DoorBoss" && interactable.onIneteractedByPlayer() && GameManager.Instance.isKeyFound == true) {
+			GameManager.Instance.isKeyFound = false;
 			keyObject.SetActive( false );
 		}
 	}

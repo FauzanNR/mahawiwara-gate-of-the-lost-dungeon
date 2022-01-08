@@ -18,28 +18,8 @@ public class BerkahAlam: MonoBehaviour {
 
 	void Update() {
 		if(isParticleOn == true && particle.isStopped) {
-			this.gameObject.SetActive( false );
-		}
-
-		if(damageArea.isTriggered) {
-			print( "Particle Collosion" );
-			if(damageArea.colliderObj().TryGetComponent( out NPCHealth npc )) {
-				npc.getDamage( damage );
-			}
+			Destroy( this.gameObject );
 		}
 	}
 
-	//private void OnParticleCollision(GameObject other) {
-	//	if(other.transform.root.TryGetComponent( out NPCHealth npc )) {
-	//		npc.getDamage( damage );
-	//		print( "Particle Collosion" );
-	//	}
-	//}
-
-	//private void OnTriggerEnter(Collider other) {
-	//	print( other.gameObject.name );
-	//	if(other.TryGetComponent( out NPCHealth npc )) {
-	//		npc.getDamage( damage );
-	//	}
-	//}
 }

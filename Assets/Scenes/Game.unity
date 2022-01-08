@@ -131,7 +131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 597637728}
   - component: {fileID: 597637727}
-  - component: {fileID: 597637729}
   m_Layer: 0
   m_Name: LevelBuilder
   m_TagString: LevelBuilder
@@ -182,23 +181,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &597637729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597637726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c0c91d6791309f149fdd4cc023d54a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Berkah:
-  - {fileID: 8866284070567249281, guid: bbafa82f93456ae2486bc5b6065d7407, type: 3}
-  - {fileID: 7869243540467759771, guid: ed4992e4cbd86fe9ba488b042408cf6a, type: 3}
-  level: 0
-  levelBuilder: {fileID: 597637727}
 --- !u!1 &795755251
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +267,7 @@ PrefabInstance:
     - target: {fileID: 1982828342383707033, guid: b2f6713011d8b1eefaed75ce7796e1e8,
         type: 3}
       propertyPath: m_LayerMask.m_Bits
-      value: 1280
+      value: 20480
       objectReference: {fileID: 0}
     - target: {fileID: 1982828342383707034, guid: b2f6713011d8b1eefaed75ce7796e1e8,
         type: 3}
@@ -350,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 1982828342383707035, guid: b2f6713011d8b1eefaed75ce7796e1e8,
         type: 3}
       propertyPath: m_LayerMask.m_Bits
-      value: 1280
+      value: 20480
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2f6713011d8b1eefaed75ce7796e1e8, type: 3}

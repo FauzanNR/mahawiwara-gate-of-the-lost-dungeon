@@ -18,5 +18,6 @@ public partial class NPCAnimation: MonoBehaviour {
 
 	void changeAnimations(NPC_STATE animationName) {
 		animator.Play( animationName.ToString() );
+		print( animationName );
 	}
 }
