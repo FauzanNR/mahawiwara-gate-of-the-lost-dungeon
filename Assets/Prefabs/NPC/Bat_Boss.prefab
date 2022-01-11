@@ -658,6 +658,7 @@ MonoBehaviour:
   attacksPositionList:
   - {fileID: 2154789619828528142}
   health: {fileID: 5336419501952352186}
+  damage: 10
 --- !u!1 &1000011643250032
 GameObject:
   m_ObjectHideFlags: 0

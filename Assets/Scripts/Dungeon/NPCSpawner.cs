@@ -26,7 +26,17 @@ public class NPCSpawner: MonoBehaviour {
 
 	void OnDestroy() {
 		GameManager.OnStateChange -= roomIsDone;
+		foreach(var npc in npcPool) {
+			if(npc != null) {
+				npc.SetActive( false );
+				Destroy( npc );
+			}
+		}
+		if(npcPool != null && npcPool.Count != 0) {
+			npcPool.Clear();
+		}
 	}
+
 	void Update() {
 
 		if(roomDone && npcPool.Count == 0) {

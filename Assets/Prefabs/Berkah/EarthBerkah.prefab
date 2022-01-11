@@ -76,7 +76,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9024400095678611600
 Transform:
   m_ObjectHideFlags: 0
@@ -128,6 +128,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9024400095678611600}
     m_Modifications:
+    - target: {fileID: 613159262682134432, guid: 1a823d3600fbc736bb410d79dda80ed1,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 614203440221487032, guid: 1a823d3600fbc736bb410d79dda80ed1,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 614203440221487032, guid: 1a823d3600fbc736bb410d79dda80ed1,
+        type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[0].emitProbability
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 739176127158603746, guid: 1a823d3600fbc736bb410d79dda80ed1,
         type: 3}
       propertyPath: m_Name

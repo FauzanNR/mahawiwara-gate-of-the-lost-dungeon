@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 816597492}
   - component: {fileID: 816597494}
   - component: {fileID: 816597493}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: IconSkill2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1084543376}
   - component: {fileID: 1084543378}
   - component: {fileID: 1084543377}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 1164467295}
   - component: {fileID: 1164467297}
   - component: {fileID: 1164467296}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 1259852749}
   - component: {fileID: 1259852751}
   - component: {fileID: 1259852750}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 1790740485}
   - component: {fileID: 1790740487}
   - component: {fileID: 1790740486}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: IconSkill3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 7538592326497553485}
   - component: {fileID: 7513601665767470064}
   - component: {fileID: 7237585321929016422}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 658949694709431645}
   - component: {fileID: 658949694709431644}
   - component: {fileID: 658949694709431635}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 658949694818368950}
   - component: {fileID: 658949694818368944}
   - component: {fileID: 658949694818368951}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 658949695372203438}
   - component: {fileID: 658949695372203432}
   - component: {fileID: 658949695372203439}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658949695404293829}
   - component: {fileID: 658949695404293830}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: HealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,7 +904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 658949695572337943}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2216,8 +2216,8 @@ MonoBehaviour:
   weapon:
   - {fileID: 919132148989965280}
   - {fileID: 919132148490679992}
-  berkah: {fileID: 0}
   keyObject: {fileID: 658949696281179240}
+  berkah: {fileID: 0}
 --- !u!114 &4912331374096340837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,7 +2561,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5254982278560863106}
   - component: {fileID: 5254982278560863118}
-  - component: {fileID: 5254982278560863119}
   - component: {fileID: 5254982278560863104}
   - component: {fileID: 5254982278560863105}
   m_Layer: 11
@@ -2616,7 +2615,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 32535
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2628,14 +2627,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5254982278560863119
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5254982278560863107}
-  m_Enabled: 1
 --- !u!114 &5254982278560863104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3615,7 +3606,7 @@ GameObject:
   - component: {fileID: 2978076051602734354}
   - component: {fileID: 4900878061769879415}
   - component: {fileID: 2022242287478506584}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: IconSkill1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

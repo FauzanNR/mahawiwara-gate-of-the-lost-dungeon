@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class CombatCondition: MonoBehaviour {
 	private bool isSkilling;
 	private PLAYER_STATE State;
 
-    [Header( "Reference" )]
+	[Header( "Reference" )]
 	private PlayerMove playermove;
 	private Animator animator;
 	private WeaponStats weaponStats;
@@ -27,7 +28,6 @@ public class CombatCondition: MonoBehaviour {
 		}
 	}
 
-	// Start is called before the first frame update
 	void Start() {
 		playermove = GetComponent<PlayerMove>();
 		animator = GetComponent<Animator>();
@@ -39,58 +39,47 @@ public class CombatCondition: MonoBehaviour {
 		InputAttack();
 	}
 
-	void InputAttack()
-    {
-		stats = GameObject.FindGameObjectWithTag("Player");
-		weaponStats = stats.GetComponentInChildren<WeaponStats>();
+	void InputAttack() {
+		//stats = GameObject.FindGameObjectWithTag( "Player" );
+		//stats = this.gameObject;
+		weaponStats = this.gameObject.GetComponentInChildren<WeaponStats>();
 
-		isAttacking = animator.GetCurrentAnimatorStateInfo(1).IsName("Attack1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Attack3") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill3");
-		isSkilling = animator.GetCurrentAnimatorStateInfo(1).IsName("Skill1") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill2") || animator.GetCurrentAnimatorStateInfo(1).IsName("Skill3");
-		var berkahAttack = animator.GetCurrentAnimatorStateInfo(2).IsName(PLAYER_STATE.BerkahAttack.ToString());
+		isAttacking = animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack2" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack3" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill2" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill3" );
+		isSkilling = animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill1" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill2" ) || animator.GetCurrentAnimatorStateInfo( 1 ).IsName( "Skill3" );
+		var berkahAttack = animator.GetCurrentAnimatorStateInfo( 2 ).IsName( PLAYER_STATE.BerkahAttack.ToString() );
 
-		if (!berkahAttack)
-		{
-			if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.C))
-			{
+		if(!berkahAttack) {
+			if(Input.GetButtonDown( "Fire1" ) || Input.GetKeyDown( KeyCode.R ) || Input.GetKeyDown( KeyCode.Q ) || Input.GetKeyDown( KeyCode.C )) {
 				//if(isAttacking || isSkilling) {
-				animator.SetLayerWeight(1, 1);
-				CancelInvoke("BackToIdle");
-				if (Input.GetButtonDown("Fire1") && !isSkilling)
-				{
+				animator.SetLayerWeight( 1, 1 );
+				CancelInvoke( "BackToIdle" );
+				if(Input.GetButtonDown( "Fire1" ) && !isSkilling) {
 					playerState = PLAYER_STATE.att1;
 					MeleAttack();
-				}
-				else if (
-					Input.GetKeyDown(KeyCode.Q) && !isAttacking && cooldownCondition.secondSkill1 <= 0)
-				{
+				} else if(
+					  Input.GetKeyDown( KeyCode.Q ) && !isAttacking && cooldownCondition.secondSkill1 <= 0) {
 					playerState = PLAYER_STATE.att2;
-					animator.Play("Skill1", 1);
+					animator.Play( "Skill1", 1 );
 					ComboReset();
-				}
-				else if (Input.GetKeyDown(KeyCode.R) && !isAttacking && cooldownCondition.secondSkill2 <= 0)
-				{
+				} else if(Input.GetKeyDown( KeyCode.R ) && !isAttacking && cooldownCondition.secondSkill2 <= 0) {
 					playerState = PLAYER_STATE.att3;
-					animator.Play("Skill2", 1);
+					animator.Play( "Skill2", 1 );
 					ComboReset();
-				}
-				else if (Input.GetKeyDown(KeyCode.C) && !isAttacking && cooldownCondition.secondSkill3 <= 0)
-				{
+				} else if(Input.GetKeyDown( KeyCode.C ) && !isAttacking && cooldownCondition.secondSkill3 <= 0) {
 					playerState = PLAYER_STATE.att4;
-					animator.Play("Skill3", 1);
+					animator.Play( "Skill3", 1 );
 					ComboReset();
 				}
-			}
-			else if (Input.GetKeyDown(KeyCode.Alpha3) && !isAttacking && !isSkilling)
-			{
-				print("click 3");
-				CancelInvoke("BackToIdle");
-				animator.SetLayerWeight(2, 1);
+			} else if(Input.GetKeyDown( KeyCode.Alpha3 ) && !isAttacking && !isSkilling) {
+				print( "click 3" );
+				CancelInvoke( "BackToIdle" );
+				animator.SetLayerWeight( 2, 1 );
 				playerState = PLAYER_STATE.BerkahAttack;
-				animator.Play(playerState.ToString(), 2);// replace with playerManager.Berkah(); level manager
+				animator.Play( playerState.ToString(), 2 );// replace with playerManager.Berkah(); level manager
 			}
 		}
 
-		Invoke("BackToIdle", 3);
+		Invoke( "BackToIdle", 3 );
 	}
 
 	void MeleAttack() {

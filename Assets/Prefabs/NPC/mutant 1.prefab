@@ -614,7 +614,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   currHealth: 0
-  attack: 10
   destroyAfterDeath: 1
 --- !u!54 &5526502709885776064
 Rigidbody:
@@ -1637,6 +1636,7 @@ MonoBehaviour:
   attacksPositionList:
   - {fileID: 8528046278089367929}
   health: {fileID: 7904167271585938330}
+  damage: 12
 --- !u!1 &8459828216948587965
 GameObject:
   m_ObjectHideFlags: 0

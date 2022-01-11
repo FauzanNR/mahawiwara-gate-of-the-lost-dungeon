@@ -658,6 +658,7 @@ MonoBehaviour:
   attacksPositionList:
   - {fileID: 2154789619828528142}
   health: {fileID: 8621547769659578715}
+  damage: 9
 --- !u!1 &1000011643250032
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +923,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   currHealth: 0
-  attack: 10
   destroyAfterDeath: 1
 --- !u!65 &1042627778086724111
 BoxCollider:

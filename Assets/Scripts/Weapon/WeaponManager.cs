@@ -9,6 +9,7 @@ public class WeaponManager: MonoBehaviour {
 		PlayerDataManager.Load();
 		int level = PlayerDataManager.player.level;
 		for(int i = 0; i <= level; i++) {
+			print( i );
 			weapon[i].SetActive( true );
 		}
 	}

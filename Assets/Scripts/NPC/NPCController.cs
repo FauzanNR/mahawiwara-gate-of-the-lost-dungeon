@@ -20,6 +20,7 @@ public class NPCController: MonoBehaviour {
 	public AreaHelper chaseArea;
 	public List<EnemyAttack> attacksPositionList;
 	public NPCHealth health;
+	public int damage;
 
 	public NPC_STATE enemyState {
 		get {
@@ -40,9 +41,11 @@ public class NPCController: MonoBehaviour {
 	void setState() {
 		var movement = System.Math.Abs( agent.velocity.magnitude / agent.speed );
 
-		if(chaseArea.isTriggered && chaseArea.colliderObj().tag == "Player") {
+		if(chaseArea.isTriggered && chaseArea.colliderObj().transform.root.tag == "Player") {
+			print( chaseArea.colliderObj().transform.root.tag );
 			var distance = Vector3.Distance( player.transform.position, transform.position );
-			if(chaseArea.isTriggered && attackArea.isTriggered) {
+
+			if(attackArea.isTriggered && attackArea.colliderObj().transform.root.tag == "Player") {
 				enemyState = NPC_STATE.Attack1;
 			} else if(distance > 2.5f) enemyState = NPC_STATE.Run;
 		} else {

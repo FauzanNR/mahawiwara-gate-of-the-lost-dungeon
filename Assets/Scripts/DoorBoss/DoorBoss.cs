@@ -10,6 +10,7 @@ public class DoorBoss: InteractableObject {
 
 	public GameObject Key, NonKey;
 	public bool checkIn = false;
+	public AreaHelper checkPoint;
 
 	private void Start() {
 		anim = GetComponent<Animator>();
@@ -17,6 +18,7 @@ public class DoorBoss: InteractableObject {
 
 	public override bool onIneteractedByPlayer() {
 		var key = GameManager.Instance.isKeyFound;
+		checkIn = checkPoint.isTriggered;
 		if(base.isInteracted && key == true && open == false) {
 			Key.SetActive( base.isInteracted );
 			if(Input.GetKeyDown( KeyCode.F )) {

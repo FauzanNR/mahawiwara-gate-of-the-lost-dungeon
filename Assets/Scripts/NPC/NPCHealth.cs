@@ -4,7 +4,6 @@ using System.Collections;
 public class NPCHealth: MonoBehaviour {
 	public int startHealth = 100;
 	public int currHealth;
-	public int attack = 10;
 	public bool destroyAfterDeath = true;
 	/*public Slider healthSlider;*/
 	private GameObject weaponPlayer;

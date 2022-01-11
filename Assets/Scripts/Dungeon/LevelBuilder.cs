@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class LevelBuilder: MonoBehaviour {
 	public Room startRoomPrefab, endRoomPrefab;
 	public List<Room> roomPrefabs = new List<Room>();
-	public Vector2 iterationRange = new Vector2( 3, 10 );
+	public Vector2 iterationRange = new Vector2( 5, 5 );
 	public GameObject navMeshSurface;
 
 	public GameObject key;
@@ -28,18 +28,24 @@ public class LevelBuilder: MonoBehaviour {
 
 	LayerMask roomLayerMask;
 
+	void Awake() {
+		GameManager.OnStateChange += OnChange;
+	}
+
+	private void OnChange(GameStates state) {
+		if(state == GameStates.Victory) {
+			iterationRange = iterationRange * GameManager.Instance.level;
+		} else if(state == GameStates.Lose) {
+
+		}
+	}
+
 	void Start() {
 
 		roomLayerMask = LayerMask.GetMask( "Room" );
 		StartCoroutine( GenerateLevel() );
 		_RoomIsDone = false;
 	}
-
-	//private void Update() {
-	//	if(Input.GetKey( KeyCode.R )) {
-	//		ResetLevelGenerator();
-	//	}
-	//}
 
 	private void Update() {
 		if(_RoomIsDone == true) {

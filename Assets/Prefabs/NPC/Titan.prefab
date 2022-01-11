@@ -769,6 +769,7 @@ MonoBehaviour:
   - {fileID: 2515485881180456069}
   - {fileID: 3021114416175231622}
   health: {fileID: 5847272016444371391}
+  damage: 7
 --- !u!114 &5847272016444371391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +784,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   currHealth: 0
-  attack: 10
   destroyAfterDeath: 1
 --- !u!136 &5744411853935834608
 CapsuleCollider:
@@ -2065,7 +2065,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 3, z: 9}
+  m_Size: {x: 12, y: 3, z: 12}
   m_Center: {x: 0, y: 0.9672198, z: 0}
 --- !u!114 &3200793444324944651
 MonoBehaviour:
@@ -2106,7 +2106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7152581469468590693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1562675200895839110}
@@ -2123,7 +2123,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1.7
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &9030327374742406115
 MonoBehaviour:

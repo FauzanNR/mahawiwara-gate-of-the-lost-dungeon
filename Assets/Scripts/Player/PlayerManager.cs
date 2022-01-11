@@ -8,21 +8,30 @@ using System;
 
 public class PlayerManager: MonoBehaviour {
 	public GameObject[] weapon;
-	public GameObject berkah;
 	public GameObject keyObject;
-
+	public GameObject berkah;
 	private InteractableObject interactable;
 	private string weaponName;
 
 	void Awake() {
 		GameManager.OnStateChange += setOffPlayer;
+
 	}
+
 
 	private void setOffPlayer(GameStates states) {
 		print( states );
 		if(states == GameStates.LoadingLevel) {
+			berkah = GameManager.Instance.getBerkah();
 			gameObject.SetActive( false );
+		} else if(states == GameStates.Lose) {
+			gameObject.GetComponent<PlayerMove>().enabled = false;
+			gameObject.GetComponentInChildren<CameraMove>().enabled = false;
+			gameObject.GetComponent<CombatCondition>().enabled = false;
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
 		} else gameObject.SetActive( true );
+
 	}
 
 	private void Start() {

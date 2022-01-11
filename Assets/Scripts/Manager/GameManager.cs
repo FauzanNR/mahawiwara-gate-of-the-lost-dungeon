@@ -7,13 +7,14 @@ using System;
 public class GameManager: MonoBehaviour {
 
 	public bool isKeyFound = false;
-	public GameObject Loading;
+	public GameObject LoadingCanvas;
+	public GameObject VictoryCanvas;
+	public GameObject LoseCanvas;
 	public GameStates gameStates;
-	public static GameManager Instance;
-	public GameObject[] Berkah;
-	public GameObject[] EndRooms;
+	public List<GameObject> Berkah;
+	public List<GameObject> EndRooms;
 	public static event Action<GameStates> OnStateChange;
-
+	public static GameManager Instance;
 	public int level {
 		get {
 			return PlayerDataManager.player.level;
@@ -27,8 +28,8 @@ public class GameManager: MonoBehaviour {
 		DontDestroyOnLoad( this.gameObject );
 	}
 
-	GameObject getEndRoom => EndRooms[level];
-	GameObject getBerkah() => Berkah[UnityEngine.Random.Range( 0, Berkah.Length - 1 )];
+	public GameObject getEndRoom => EndRooms[level];
+	public GameObject getBerkah() => Berkah[UnityEngine.Random.Range( 0, Berkah.Count - 1 )];
 
 	public void LaodScene(int sceneIndex) {
 		SceneManager.LoadScene( sceneIndex );
@@ -43,24 +44,28 @@ public class GameManager: MonoBehaviour {
 				break;
 			case GameStates.Lobby:
 				PlayerDataManager.Load();
-				PlayerDataManager.Save();
+
 				break;
 			case GameStates.Game:
-				Loading.SetActive( false );
+				LoadingCanvas.SetActive( false );
 				break;
 			case GameStates.LoadingLevel:
 				PlayerDataManager.Load();
-				Loading.SetActive( true );
+				LoadingCanvas.SetActive( true );
+				VictoryCanvas.SetActive( false );
+				LoseCanvas.SetActive( false );
 				break;
 			case GameStates.Victory:
+				VictoryCanvas.SetActive( true );
 				PlayerDataManager.player.level += 1;
 				break;
 			case GameStates.Lose:
+				LoseCanvas.SetActive( true );
 				PlayerDataManager.player.level = 0;
 				break;
 			default: throw new ArgumentOutOfRangeException( nameof( gameStates ), gameStates, null );
 		}
-
+		PlayerDataManager.Save();
 		OnStateChange?.Invoke( gameStates );
 
 	}

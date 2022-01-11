@@ -17,4 +17,8 @@ public class EndRoom: Room {
 		npcBoss.gameObject.transform.parent = null;
 		npcBoss.gameObject.SetActive( true );
 	}
+	void OnDestroy() {
+		if(npcBoss.gameObject != null)
+			Destroy( npcBoss.gameObject );
+	}
 }

@@ -25,9 +25,10 @@ public class NPCMovement: MonoBehaviour {
 		int seconds = ( int )(timer % 60);
 
 		if(controller.enemyState == NPC_STATE.Run) {
+			transform.LookAt( player.transform.position );
 			Move( player.transform.position );
 		} else if(movement == 0f &&
-			controller.enemyState != NPC_STATE.Attack1 &&
+			controller.enemyState != NPC_STATE.Attack1 && controller.enemyState != NPC_STATE.Run &&
 			controller.enemyState == NPC_STATE.Idle && seconds % IdleTime == 0) {
 			seconds = 0;
 			Move( randomPosition.generateRandomPosition( chaseArea, 1f, avoidanceLayer ) );
@@ -38,7 +39,6 @@ public class NPCMovement: MonoBehaviour {
 
 
 	void Move(Vector3 destination) {
-		transform.LookAt( destination );
 		agent.SetDestination( destination );
 	}
 }
