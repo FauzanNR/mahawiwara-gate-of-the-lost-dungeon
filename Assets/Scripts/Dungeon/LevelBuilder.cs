@@ -87,7 +87,7 @@ public class LevelBuilder: MonoBehaviour {
 
 	public IEnumerator GenerateLevel() {
 
-		GameManager.Instance.UpdateGameState( GameStates.LoadingLevel );
+		/*GameManager.Instance.UpdateGameState( GameStates.LoadingLevel );*/
 
 		WaitForSeconds startup = new WaitForSeconds( 1 );
 		WaitForFixedUpdate interval = new WaitForFixedUpdate();
