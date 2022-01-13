@@ -28,12 +28,14 @@ public class GameManager: MonoBehaviour {
 		DontDestroyOnLoad( this.gameObject );
 	}
 
+	public void Quit() => Application.Quit();
 	public GameObject getEndRoom => EndRooms[level];
 	public GameObject getBerkah() => Berkah[UnityEngine.Random.Range( 0, Berkah.Count - 1 )];
 
 	public void LaodScene(int sceneIndex) {
 		SceneManager.LoadScene( sceneIndex );
 	}
+
 
 	public void UpdateGameState(GameStates newState) {
 		gameStates = newState;
