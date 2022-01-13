@@ -1,104 +1,9 @@
 fileFormatVersion: 2
-guid: e1e43359e04eb79479268393098884c3
+guid: 6342132c50c82844fa7e9178cd561ec1
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: cliffs
-    second: {fileID: 2100000, guid: c41a1097c49b93c40b24c5fbb82892ad, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: coal
-    second: {fileID: 2100000, guid: 25f4ee9e595fa1041a21b6dd1554e10f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: dungeon_arch_mat.001
-    second: {fileID: 2100000, guid: 9e53d9c5f7d732e4fa994c3ea106b5cf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: paving with grass
-    second: {fileID: 2100000, guid: db10d7fc41fbdea43b2f4acd327fab2b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pilars
-    second: {fileID: 2100000, guid: cff27a8d6265dd84f9243bc923d18099, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tourch
-    second: {fileID: 2100000, guid: 4de53c02f4f5c67469aee5287885612d, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cliffs_baseColor
-    second: {fileID: 2800000, guid: 3b24c52f5ed896042955e7e6b64d6b7d, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cliffs_normal
-    second: {fileID: 2800000, guid: 07a0a4e92f9ba024aad37d21c57c6434, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: coal_baseColor
-    second: {fileID: 2800000, guid: c5802c52586de1c4daf09a13076508c1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: coal_emissive
-    second: {fileID: 2800000, guid: 31bd9b304b8051549a99ac16dfb3062e, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: coal_normal
-    second: {fileID: 2800000, guid: d8fab1fa8a26fc14eb685c5190abed4f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: dungeon_arch_col.tga
-    second: {fileID: 2800000, guid: 57ec2b33a14d8ba49a7bc805cc464af4, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: paving with grass_albedo
-    second: {fileID: 2800000, guid: 51bd4689da30c074fb34e61c53ddc0c7, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: paving with grass_normal
-    second: {fileID: 2800000, guid: 3b39a5d9259657c4bafbcb117f0f2ab2, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: paving with grass_roughness
-    second: {fileID: 2800000, guid: 35774c911b43d4449b3d2b57f799f30e, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: pilars_baseColor
-    second: {fileID: 2800000, guid: a57fbc65cdc33e244bf8a870e6faa80f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: pilars_normal
-    second: {fileID: 2800000, guid: 19467704b81924945ad165c715ed8dc4, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tourch_baseColor
-    second: {fileID: 2800000, guid: 1c299ca121eb6a14db9bcbb89aee1cb8, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tourch_normal
-    second: {fileID: 2800000, guid: 74aadf8b6e382304fa370cdb7d65b1c3, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -126,7 +31,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1

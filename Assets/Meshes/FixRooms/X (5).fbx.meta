@@ -1,124 +1,9 @@
 fileFormatVersion: 2
-guid: 568fcc7133739074291cb68e23e5c772
+guid: b282c825f6cb4754b98d9332e7108417
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 01_Model_5_20W_u1_v1
-    second: {fileID: 2100000, guid: 45219b3bc0a1b4e41b8c268603c00048, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: cliffs
-    second: {fileID: 2100000, guid: 9b2c25a3fca08db4cb751dfcd76b13a2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: coal
-    second: {fileID: 2100000, guid: 31e42868d23273b48a7f8ab6bc0bae7f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: dungeon_arch_mat.001
-    second: {fileID: 2100000, guid: e1ba9deb511e0b74981587cf63db4fd2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: paving with grass
-    second: {fileID: 2100000, guid: be1e58bd1eaab044cabb3ac3220e9d9c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: paving with grass.001
-    second: {fileID: 2100000, guid: 859ce05a4d2fa2c47b44d78874c340b1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pilars
-    second: {fileID: 2100000, guid: 7d63ba49f1756d249b9bdcb529afe553, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tourch
-    second: {fileID: 2100000, guid: 04e2b2c2dd4e2be439ffc4a17f27f2e5, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Paving_Diffused_Bake
-    second: {fileID: 2800000, guid: d7603f7762ce679499aa4f9f7237eb0d, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Paving_Normal_Bake
-    second: {fileID: 2800000, guid: 53e9135873a02104f8ffdd5eab728c3c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cliffs_baseColor
-    second: {fileID: 2800000, guid: 650e14a3ad8a3554b8f681e619397dc4, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cliffs_normal
-    second: {fileID: 2800000, guid: 20c0f35036f1b87469d56061bdd0922b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: coal_baseColor
-    second: {fileID: 2800000, guid: 963ca6e3e8e56074db48565e6714456e, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: coal_emissive
-    second: {fileID: 2800000, guid: c1d93902368007e4eafad70cf363fb4d, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: coal_normal
-    second: {fileID: 2800000, guid: dacb3d4c7ad3d294fa05636b0fcbfdb1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: dungeon_arch_col.tga
-    second: {fileID: 2800000, guid: dbc4769d2c0241a4ca5bb2a97a22d61d, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: paving with grass_albedo
-    second: {fileID: 2800000, guid: 1ef40f393bd659844a8c7434c32de38e, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: paving with grass_normal
-    second: {fileID: 2800000, guid: f94cb2b6511c00c4e933d1e7873c6dd0, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: paving with grass_roughness
-    second: {fileID: 2800000, guid: 13cc2af3e3fca7f4b86ada85cb79c9df, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: pilars_baseColor
-    second: {fileID: 2800000, guid: 2ce1b2983933d5e4a893878bdaa0e30b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: pilars_normal
-    second: {fileID: 2800000, guid: 5da54b8d73951d2449bc4b95f30c213b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tourch_baseColor
-    second: {fileID: 2800000, guid: a60ffed4f5f9b9544855e5982dc3224c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tourch_normal
-    second: {fileID: 2800000, guid: ca6a96bd172ab194bbf24cb10af11184, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -146,12 +31,12 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

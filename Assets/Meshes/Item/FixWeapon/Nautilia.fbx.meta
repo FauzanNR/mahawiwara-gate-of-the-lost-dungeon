@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: f7f3f9b3dd1a80a4f9d87a476259e8d8
+guid: 1d00eadd2823c6641be98471ee919bfa
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Nautilia
-    second: {fileID: 2100000, guid: 5868be8d89f282a4ca17913c92a525e8, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: M_Nautilia_Albedo
-    second: {fileID: 2800000, guid: 5f6c76a5891d6524f826efc331edccfb, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: M_Nautilia_Metallic
-    second: {fileID: 2800000, guid: a0e27aee055c0ba429fd627b73e670ec, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: M_Nautilia_Normal
-    second: {fileID: 2800000, guid: 853325ae76748024583ad07c896956d9, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: M_Nautilia_Roughness
-    second: {fileID: 2800000, guid: 1b03023af86c2d145bef29d160b063e0, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
