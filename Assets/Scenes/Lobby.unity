@@ -2549,8 +2549,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7525798663093803393, guid: 515e602f10a7c474db62bf4fc1a669ad,
+        type: 3}
+      propertyPath: memek
+      value: 
+      objectReference: {fileID: 658949694878861157}
+    - target: {fileID: 7525798663093803393, guid: 515e602f10a7c474db62bf4fc1a669ad,
+        type: 3}
+      propertyPath: kontol
+      value: 
+      objectReference: {fileID: 658949694878861158}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 515e602f10a7c474db62bf4fc1a669ad, type: 3}
+--- !u!114 &658949694878861157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 623819138753479383, guid: 515e602f10a7c474db62bf4fc1a669ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 658949694878861156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &658949694878861158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7027784750519209433, guid: 515e602f10a7c474db62bf4fc1a669ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 658949694878861156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &1086206957461799762
 MeshFilter:
   m_ObjectHideFlags: 0
