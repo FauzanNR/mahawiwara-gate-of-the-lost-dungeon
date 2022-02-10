@@ -8,11 +8,12 @@ public class AreaHelper: MonoBehaviour {
 
 	public Collider colliderObj() => obj;
 
-	void OnTriggerEnter(Collider other) {
-		isTriggered = true;
+	void OnTriggerStay(Collider other) {
 		obj = other;
 	}
-
+	void OnTriggerEnter(Collider other) {
+		isTriggered = true;
+	}
 	void OnTriggerExit(Collider other) {
 		isTriggered = false;
 	}

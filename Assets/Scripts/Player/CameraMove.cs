@@ -33,5 +33,9 @@ public class CameraMove: MonoBehaviour {
 		} else if(cinemachine.m_Lens.FieldOfView > 40) {
 			cinemachine.m_Lens.FieldOfView -= 0.2f;
 		}
+
+		if(playerBody.gameObject.TryGetComponent( out PlayerManager player )) {
+			if(player.isDead) transform.LookAt( playerBody );
+		}
 	}
 }

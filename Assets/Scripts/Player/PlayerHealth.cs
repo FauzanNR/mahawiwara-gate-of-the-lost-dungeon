@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,14 @@ public class PlayerHealth: MonoBehaviour {
 	public Slider healthSlider;
 	GameObject enemy;
 
-	// Start is called before the first frame update
+	void Awake() {
+		GameManager.OnStateChange += setOffPlayer;
+	}
+
+	private void setOffPlayer(GameStates obj) {
+		if(obj == GameStates.Lobby) currHealth = startHealth;
+	}
+
 	void Start() {
 		currHealth = startHealth;
 	}

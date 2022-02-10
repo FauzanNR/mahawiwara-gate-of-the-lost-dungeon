@@ -25,7 +25,6 @@ public class NPCMovement: MonoBehaviour {
 		int seconds = ( int )(timer % 60);
 
 		if(controller.enemyState == NPC_STATE.Run) {
-			transform.LookAt( player.transform.position );
 			Move( player.transform.position );
 		} else if(movement == 0f &&
 			controller.enemyState != NPC_STATE.Attack1 && controller.enemyState != NPC_STATE.Run &&
@@ -33,12 +32,14 @@ public class NPCMovement: MonoBehaviour {
 			seconds = 0;
 			Move( randomPosition.generateRandomPosition( chaseArea, 1f, avoidanceLayer ) );
 		} else if(controller.enemyState == NPC_STATE.Attack1) {
-			transform.LookAt( player.transform.position );
+			var direction = (transform.position - player.transform.position).normalized;
+			Move( player.transform.position );
 		}
 	}
 
 
 	void Move(Vector3 destination) {
 		agent.SetDestination( destination );
+		//transform.LookAt( destination );
 	}
 }

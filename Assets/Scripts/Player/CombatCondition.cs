@@ -18,6 +18,10 @@ public class CombatCondition: MonoBehaviour {
 	private WeaponStats weaponStats;
 	private GameObject stats;
 	private CooldownCondition cooldownCondition;
+	private PlayerManager playerManager;
+
+	public AudioSource thunderRskill;
+	public AudioSource sword;
 
 	public PLAYER_STATE playerState {
 		get {
@@ -32,12 +36,24 @@ public class CombatCondition: MonoBehaviour {
 		playermove = GetComponent<PlayerMove>();
 		animator = GetComponent<Animator>();
 		cooldownCondition = GetComponent<CooldownCondition>();
+		playerManager = GetComponent<PlayerManager>();
 	}
 
-	// Update is called once per frame
+	void playThunderAudio() {
+		thunderRskill.Play();
+	}
+
+	void playSwordAudio() {
+		sword.Play();
+	}
 	void Update() {
 		InputAttack();
 	}
+	void combatParticle(GameObject particle) {
+		particle.GetComponentInChildren<ParticleSystem>().Play();
+	}
+
+
 
 	void InputAttack() {
 		//stats = GameObject.FindGameObjectWithTag( "Player" );
@@ -56,8 +72,7 @@ public class CombatCondition: MonoBehaviour {
 				if(Input.GetButtonDown( "Fire1" ) && !isSkilling) {
 					playerState = PLAYER_STATE.att1;
 					MeleAttack();
-				} else if(
-					  Input.GetKeyDown( KeyCode.Q ) && !isAttacking && cooldownCondition.secondSkill1 <= 0) {
+				} else if(Input.GetKeyDown( KeyCode.Q ) && !isAttacking && cooldownCondition.secondSkill1 <= 0) {
 					playerState = PLAYER_STATE.att2;
 					animator.Play( "Skill1", 1 );
 					ComboReset();
@@ -70,12 +85,12 @@ public class CombatCondition: MonoBehaviour {
 					animator.Play( "Skill3", 1 );
 					ComboReset();
 				}
-			} else if(Input.GetKeyDown( KeyCode.Alpha3 ) && !isAttacking && !isSkilling) {
+			} else if(Input.GetKeyDown( KeyCode.Alpha3 ) && !isAttacking && !isSkilling && !cooldownCondition.berkahSkill) {
 				print( "click 3" );
 				CancelInvoke( "BackToIdle" );
 				animator.SetLayerWeight( 2, 1 );
 				playerState = PLAYER_STATE.BerkahAttack;
-				animator.Play( playerState.ToString(), 2 );// replace with playerManager.Berkah(); level manager
+				animator.Play( playerManager.berkah.GetComponent<BerkahAlam>().berkahName, 2 );// replace with playerManager.Berkah(); level manager
 			}
 		}
 

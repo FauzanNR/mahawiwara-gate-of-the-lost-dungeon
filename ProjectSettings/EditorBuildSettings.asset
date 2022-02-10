@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 21f55511fa22d3945bef158b81a44bd5
   - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: 2fa887930940f3c46a16f272f616e243
+    path: Assets/Scenes/LOBBYterrain.unity
+    guid: 4507cc455e42222418664dc43af3c728
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

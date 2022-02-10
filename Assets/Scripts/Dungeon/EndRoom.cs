@@ -1,24 +1,29 @@
 ﻿using UnityEngine;
+using System.Linq.Expressions;
 
 public class EndRoom: Room {
 	[SerializeField] NPCController npcBoss;
-	[SerializeField] GameObject reward;
+	private int level;
+
+	void setVictory() {
+		GameManager.Instance.UpdateGameState( GameStates.Victory );
+		if(level == PlayerDataManager.player.level) PlayerDataManager.player.level += 1;
+	}
 
 	void Update() {
 		if(npcBoss.enemyState == NPC_STATE.Death) {
-			GameManager.Instance.UpdateGameState( GameStates.Victory );
-			var rewardSpawnPos = npcBoss.gameObject.transform;
-			var newReward = Instantiate( reward, rewardSpawnPos );
+			Invoke( nameof( setVictory ), 7 );
 		}
 	}
 
 	void Start() {
+		level = PlayerDataManager.player.level;
 		GameManager.Instance.UpdateGameState( GameStates.Game );
 		npcBoss.gameObject.transform.parent = null;
 		npcBoss.gameObject.SetActive( true );
 	}
 	void OnDestroy() {
-		if(npcBoss.gameObject != null)
+		if(npcBoss != null)
 			Destroy( npcBoss.gameObject );
 	}
 }

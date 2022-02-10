@@ -4,16 +4,20 @@ using UnityEngine;
 using System.IO;
 
 public class DoorBoss: InteractableObject {
-	private Animator anim;
+	private Animator anim1;
+	private Animator anim2;
 	private bool open = false;
 	private bool interacted = false;
 
 	public GameObject Key, NonKey;
 	public bool checkIn = false;
 	public AreaHelper checkPoint;
+	public GameObject door1;
+	public GameObject door2;
 
 	private void Start() {
-		anim = GetComponent<Animator>();
+		anim1 = door1.gameObject.GetComponent<Animator>();
+		anim2 = door2.gameObject.GetComponent<Animator>();
 	}
 
 	public override bool onIneteractedByPlayer() {
@@ -24,7 +28,8 @@ public class DoorBoss: InteractableObject {
 			if(Input.GetKeyDown( KeyCode.F )) {
 				Key.SetActive( false );
 				open = true;
-				anim.SetBool( "Openn", base.isInteracted );
+				anim1.SetBool( "Openn", base.isInteracted );
+				anim2.SetBool( "Openn", base.isInteracted );
 				return interacted = true;
 			}
 		} else if(base.isInteracted && key == false && open == false) {
@@ -32,7 +37,8 @@ public class DoorBoss: InteractableObject {
 			return interacted = false;
 		} else if(!base.isInteracted && checkIn == true) {
 			NonKey.SetActive( false );
-			anim.SetBool( "Openn", false );
+			anim1.SetBool( "Openn", false );
+			anim2.SetBool( "Openn", false );
 			return interacted = false;
 		} else if(!base.isInteracted) {
 			NonKey.SetActive( false );

@@ -30,6 +30,11 @@ public class LevelBuilder: MonoBehaviour {
 
 	void Awake() {
 		GameManager.OnStateChange += OnChange;
+		endRoomPrefab = GameManager.Instance.getEndRoom;
+	}
+
+	void OnDestroy() {
+		GameManager.OnStateChange -= OnChange;
 	}
 
 	private void OnChange(GameStates state) {
@@ -66,7 +71,7 @@ public class LevelBuilder: MonoBehaviour {
 				if(i == numRoom) {
 					Vector3 posChest = new PositionHelper().generateRandomPosition(
 														placedRooms[i].transform.GetChild( 0 ).gameObject.GetComponent<Collider>(),
-														 0.5f,
+														 0.3f,
 														   chestAvoidanceLayer );
 
 					if(GameObject.FindGameObjectsWithTag( "Chest" ).Length < 1) {
@@ -87,7 +92,7 @@ public class LevelBuilder: MonoBehaviour {
 
 	public IEnumerator GenerateLevel() {
 
-		/*GameManager.Instance.UpdateGameState( GameStates.LoadingLevel );*/
+		GameManager.Instance.UpdateGameState( GameStates.LoadingLevel );
 
 		WaitForSeconds startup = new WaitForSeconds( 1 );
 		WaitForFixedUpdate interval = new WaitForFixedUpdate();

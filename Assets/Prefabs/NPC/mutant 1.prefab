@@ -386,8 +386,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 3, z: 9}
-  m_Center: {x: 0, y: 0.9672198, z: 0}
+  m_Size: {x: 9, y: 0.52, z: 9}
+  m_Center: {x: 0, y: 0.51, z: 0}
 --- !u!114 &9092779694359859173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,7 +1098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6907183486814101999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.26}
+  m_LocalPosition: {x: 0, y: -0.53, z: 1.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9092563649907010745}
@@ -1114,8 +1114,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.42
-  m_Height: 2
+  m_Radius: 0.57
+  m_Height: 0.83
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &3006291256725599337
@@ -1549,8 +1549,8 @@ MonoBehaviour:
   chaseArea: {fileID: 6081744279808632822}
   avoidanceLayer:
     serializedVersion: 2
-    m_Bits: 15360
-  IdleTime: 2
+    m_Bits: 12288
+  IdleTime: 3
 --- !u!195 &8459051869747443205
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1561,7 +1561,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5.4
   m_Acceleration: 13
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1637,6 +1637,11 @@ MonoBehaviour:
   - {fileID: 8528046278089367929}
   health: {fileID: 7904167271585938330}
   damage: 12
+  rayYpost: 1
+  rayDistance: 12
+  mask:
+    serializedVersion: 2
+    m_Bits: 32768
 --- !u!1 &8459828216948587965
 GameObject:
   m_ObjectHideFlags: 0

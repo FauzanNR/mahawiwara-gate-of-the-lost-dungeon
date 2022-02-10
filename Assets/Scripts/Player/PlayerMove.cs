@@ -24,6 +24,10 @@ public class PlayerMove: MonoBehaviour {
 	private Animator anim;
 	private CharacterController controller;
 
+	public AudioSource step;
+
+	public void stepAudio() => step.Play();
+
 	void Start() {
 		anim = GetComponent<Animator>();
 		controller = GetComponent<CharacterController>();
@@ -42,17 +46,22 @@ public class PlayerMove: MonoBehaviour {
 			ChangeAnimationState( "Movement" );
 		}
 
+
+
+
 		//Gravity setting
 		velocity.y += gravity * Time.deltaTime;
 		controller.Move( velocity * Time.deltaTime );
 		if(!Input.GetButtonDown( "Fire1" ) && (!anim.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack1" ) && !anim.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack2" ) && !anim.GetCurrentAnimatorStateInfo( 1 ).IsName( "Attack3" )) && !anim.GetCurrentAnimatorStateInfo( 2 ).IsName( "BerkahAttack" )) {
 			Movement();
 		}
+
 		if(Input.GetKey( KeyCode.LeftShift )) {
 			Dash();
 		} else {
 			Walk();
 		}
+
 		//Set Value animasi
 		anim.SetFloat( "VelocityX", transformX );
 		anim.SetFloat( "VelocityZ", transformZ );
@@ -69,12 +78,14 @@ public class PlayerMove: MonoBehaviour {
 	}
 
 	public void Dash() {
+
 		anim.SetBool( "Dash", true );
 		moveSpeed = 6;
 		transformZ *= 2;
 	}
 
 	public void Walk() {
+
 		anim.SetBool( "Dash", false );
 		moveSpeed = 3;
 	}

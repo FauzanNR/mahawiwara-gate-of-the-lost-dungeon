@@ -2,8 +2,8 @@
 
 public class BerkahAlam: MonoBehaviour {
 
-	int cooldown;
-	public AreaHelper damageArea;
+	public string berkahName;
+	public int cooldown;
 	public int damage;
 	bool isParticleOn = false;
 	private ParticleSystem particle;
@@ -13,7 +13,6 @@ public class BerkahAlam: MonoBehaviour {
 		this.gameObject.SetActive( true );
 		isParticleOn = true;
 		particle = GetComponentInChildren<ParticleSystem>();
-		particle.Play();
 	}
 
 	void Update() {
