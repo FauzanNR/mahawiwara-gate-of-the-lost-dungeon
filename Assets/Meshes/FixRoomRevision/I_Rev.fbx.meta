@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: a70c05191822bd1429894acedbef3feb
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: a92a172cfd459684ebdffbf03c2c916e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cliffs.001
+    second: {fileID: 2100000, guid: 731baef3932f6254dbe3dc2dcb32215f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coal
+    second: {fileID: 2100000, guid: 2463e3ad60e5f2f4fabe66642503ffc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dungeon_arch_mat.001
+    second: {fileID: 2100000, guid: 66bda69d80e4ae244bce42bcf89f4830, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paving with grass
+    second: {fileID: 2100000, guid: 7b0dc236d12ce804abd8f2a83c17912c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paving with grass.001
+    second: {fileID: 2100000, guid: ba9ca58eb667f3c419200ddde1e08e58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pilars.001
+    second: {fileID: 2100000, guid: a8ad9883f0453c94dab542f5b40506e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tourch
+    second: {fileID: 2100000, guid: 6bb094f60805a0044a607abe1d7f7179, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 0d0f464deeee6e735714729c59bc8092
+    second: {fileID: 2800000, guid: bc4abc6d8cd665743969a3a366b7fe79, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Paving_Diffused_Bake
+    second: {fileID: 2800000, guid: 94672b6f7bc51cb49b206d676c8c5687, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Paving_Normal_Bake
+    second: {fileID: 2800000, guid: 6e6a8a28759e4ad459e6703afd1ef891, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ancient_column_low_poly_Material_BaseColor
+    second: {fileID: 2800000, guid: b956b8abf307337468e7dd84989cf207, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ancient_column_low_poly_Material_Normal
+    second: {fileID: 2800000, guid: ed0f6a145a8d9744eb14f07b0f752acb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cliffs_normal
+    second: {fileID: 2800000, guid: 911b0882054523c46adc93ed672e5dcf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coal_baseColor
+    second: {fileID: 2800000, guid: 323901dee56829742ab619c5f3643280, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coal_emissive
+    second: {fileID: 2800000, guid: a7cc7f0129e635848b08804b6a839d88, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coal_normal
+    second: {fileID: 2800000, guid: c4058d663670bce43880ff1214fca66e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dungeon_arch_col.tga
+    second: {fileID: 2800000, guid: 157eb8129e9017f41ab88a7428265d25, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: paving with grass_albedo
+    second: {fileID: 2800000, guid: 117691d33df72d7458d843011f9ecc22, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: paving with grass_normal
+    second: {fileID: 2800000, guid: b37c5802657861741a487be653db32b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: paving with grass_roughness
+    second: {fileID: 2800000, guid: 5bc2e7ab81bc04f44b4170962c69ca02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pilars_baseColor
+    second: {fileID: 2800000, guid: ed3f09ea8f90dbf4dbabdb5fb4572e51, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pilars_normal
+    second: {fileID: 2800000, guid: 59c411fee02fbef41a8c549751a91b65, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tourch_baseColor
+    second: {fileID: 2800000, guid: eff93aee85507464fade8fd57a058d35, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tourch_normal
+    second: {fileID: 2800000, guid: e900caf09e9f048439f2125286f25152, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
